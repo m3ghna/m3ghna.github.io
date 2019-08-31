@@ -1,0 +1,5795 @@
+/*!-------------------------------------------------------------
+ TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# FlexBox Grid System
+# Boilerplate Styles
+
+# Main Layout
+# Shortcodes
+# Google Fonts
+# Fonts
+# Icons
+# Colors
+# Portfolio
+# Blog
+# Lightbox
+# Justified Gallery
+# Media Queries
+--------------------------------------------------------------*/
+
+
+/*!-------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+body {
+	margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0
+}
+
+[hidden],
+template {
+	display: none
+}
+
+a {
+	background-color: transparent
+}
+
+a:active,
+a:hover {
+	outline: 0
+}
+
+abbr[title] {
+	border-bottom: 1px dotted
+}
+
+b,
+strong {
+	font-weight: bold
+}
+
+dfn {
+	font-style: italic
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0
+}
+
+mark {
+	background: #ff0;
+	color: #000
+}
+
+small {
+	font-size: 80%
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline
+}
+
+sup {
+	top: -0.5em
+}
+
+sub {
+	bottom: -0.25em
+}
+
+img {
+	border: 0
+}
+
+svg:not(:root) {
+	overflow: hidden
+}
+
+figure {
+	margin: 1em 40px
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0
+}
+
+pre {
+	overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0
+}
+
+button {
+	overflow: visible
+}
+
+button,
+select {
+	text-transform: none
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+
+input {
+	line-height: normal
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em
+}
+
+legend {
+	border: 0;
+	padding: 0
+}
+
+textarea {
+	overflow: auto
+}
+
+optgroup {
+	font-weight: bold
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+td,
+th {
+	padding: 0
+}
+
+
+/*!-------------------------------------------------------------
+# FlexBox Grid System
+--------------------------------------------------------------*/
+
+.ish-container-fluid,
+.ish-container {
+	margin-right: auto;
+	margin-left: auto
+}
+
+.ish-container-fluid {
+	padding-right: 2rem;
+	padding-left: 2rem
+}
+
+.ish-row {
+	box-sizing: border-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -0.5rem;
+	margin-left: -0.5rem
+}
+
+.ish-row.ish-reverse {
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse
+}
+
+.ish-col.ish-reverse {
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse
+}
+
+.ish-col-xs,
+.ish-col-xs-1,
+.ish-col-xs-2,
+.ish-col-xs-3,
+.ish-col-xs-4,
+.ish-col-xs-5,
+.ish-col-xs-6,
+.ish-col-xs-7,
+.ish-col-xs-8,
+.ish-col-xs-9,
+.ish-col-xs-10,
+.ish-col-xs-11,
+.ish-col-xs-12,
+.ish-col-xs-offset-0,
+.ish-col-xs-offset-1,
+.ish-col-xs-offset-2,
+.ish-col-xs-offset-3,
+.ish-col-xs-offset-4,
+.ish-col-xs-offset-5,
+.ish-col-xs-offset-6,
+.ish-col-xs-offset-7,
+.ish-col-xs-offset-8,
+.ish-col-xs-offset-9,
+.ish-col-xs-offset-10,
+.ish-col-xs-offset-11,
+.ish-col-xs-offset-12 {
+	box-sizing: border-box;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem
+}
+
+.ish-col-xs {
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	max-width: 100%
+}
+
+.ish-col-xs-1 {
+	-ms-flex-preferred-size: 8.333%;
+	flex-basis: 8.333%;
+	max-width: 8.333%
+}
+
+.ish-col-xs-2 {
+	-ms-flex-preferred-size: 16.666%;
+	flex-basis: 16.666%;
+	max-width: 16.666%
+}
+
+.ish-col-xs-3 {
+	-ms-flex-preferred-size: 25%;
+	flex-basis: 25%;
+	max-width: 25%
+}
+
+.ish-col-xs-4 {
+	-ms-flex-preferred-size: 33.333%;
+	flex-basis: 33.333%;
+	max-width: 33.333%
+}
+
+.ish-col-xs-5 {
+	-ms-flex-preferred-size: 41.667%;
+	flex-basis: 41.667%;
+	max-width: 41.667%
+}
+
+.ish-col-xs-6 {
+	-ms-flex-preferred-size: 50%;
+	flex-basis: 50%;
+	max-width: 50%
+}
+
+.ish-col-xs-7 {
+	-ms-flex-preferred-size: 58.333%;
+	flex-basis: 58.333%;
+	max-width: 58.333%
+}
+
+.ish-col-xs-8 {
+	-ms-flex-preferred-size: 66.667%;
+	flex-basis: 66.667%;
+	max-width: 66.667%
+}
+
+.ish-col-xs-9 {
+	-ms-flex-preferred-size: 75%;
+	flex-basis: 75%;
+	max-width: 75%
+}
+
+.ish-col-xs-10 {
+	-ms-flex-preferred-size: 83.333%;
+	flex-basis: 83.333%;
+	max-width: 83.333%
+}
+
+.ish-col-xs-11 {
+	-ms-flex-preferred-size: 91.667%;
+	flex-basis: 91.667%;
+	max-width: 91.667%
+}
+
+.ish-col-xs-12 {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	max-width: 100%
+}
+
+.ish-col-xs-offset-0 {
+	margin-left: 0
+}
+
+.ish-col-xs-offset-1 {
+	margin-left: 8.333%
+}
+
+.ish-col-xs-offset-2 {
+	margin-left: 16.666%
+}
+
+.ish-col-xs-offset-3 {
+	margin-left: 25%
+}
+
+.ish-col-xs-offset-4 {
+	margin-left: 33.333%
+}
+
+.ish-col-xs-offset-5 {
+	margin-left: 41.667%
+}
+
+.ish-col-xs-offset-6 {
+	margin-left: 50%
+}
+
+.ish-col-xs-offset-7 {
+	margin-left: 58.333%
+}
+
+.ish-col-xs-offset-8 {
+	margin-left: 66.667%
+}
+
+.ish-col-xs-offset-9 {
+	margin-left: 75%
+}
+
+.ish-col-xs-offset-10 {
+	margin-left: 83.333%
+}
+
+.ish-col-xs-offset-11 {
+	margin-left: 91.667%
+}
+
+.ish-start-xs {
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	text-align: start
+}
+
+.ish-center-xs {
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center
+}
+
+.ish-end-xs {
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	text-align: end
+}
+
+.ish-top-xs {
+	-ms-flex-align: start;
+	align-items: flex-start
+}
+
+.ish-middle-xs {
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.ish-bottom-xs {
+	-ms-flex-align: end;
+	align-items: flex-end
+}
+
+.ish-around-xs {
+	-ms-flex-pack: distribute;
+	justify-content: space-around
+}
+
+.ish-between-xs {
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+
+.ish-first-xs {
+	-ms-flex-order: -1;
+	order: -1
+}
+
+.ish-last-xs {
+	-ms-flex-order: 1;
+	order: 1
+}
+
+@media only screen and (min-width: 48em) {
+	.ish-container {
+		width: 49rem
+	}
+	.ish-col-sm,
+	.ish-col-sm-1,
+	.ish-col-sm-2,
+	.ish-col-sm-3,
+	.ish-col-sm-4,
+	.ish-col-sm-5,
+	.ish-col-sm-6,
+	.ish-col-sm-7,
+	.ish-col-sm-8,
+	.ish-col-sm-9,
+	.ish-col-sm-10,
+	.ish-col-sm-11,
+	.ish-col-sm-12,
+	.ish-col-sm-offset-0,
+	.ish-col-sm-offset-1,
+	.ish-col-sm-offset-2,
+	.ish-col-sm-offset-3,
+	.ish-col-sm-offset-4,
+	.ish-col-sm-offset-5,
+	.ish-col-sm-offset-6,
+	.ish-col-sm-offset-7,
+	.ish-col-sm-offset-8,
+	.ish-col-sm-offset-9,
+	.ish-col-sm-offset-10,
+	.ish-col-sm-offset-11,
+	.ish-col-sm-offset-12 {
+		box-sizing: border-box;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem
+	}
+	.ish-col-sm {
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		max-width: 100%
+	}
+	.ish-col-sm-1 {
+		-ms-flex-preferred-size: 8.333%;
+		flex-basis: 8.333%;
+		max-width: 8.333%
+	}
+	.ish-col-sm-2 {
+		-ms-flex-preferred-size: 16.666%;
+		flex-basis: 16.666%;
+		max-width: 16.666%
+	}
+	.ish-col-sm-3 {
+		-ms-flex-preferred-size: 25%;
+		flex-basis: 25%;
+		max-width: 25%
+	}
+	.ish-col-sm-4 {
+		-ms-flex-preferred-size: 33.333%;
+		flex-basis: 33.333%;
+		max-width: 33.333%
+	}
+	.ish-col-sm-5 {
+		-ms-flex-preferred-size: 41.667%;
+		flex-basis: 41.667%;
+		max-width: 41.667%
+	}
+	.ish-col-sm-6 {
+		-ms-flex-preferred-size: 50%;
+		flex-basis: 50%;
+		max-width: 50%
+	}
+	.ish-col-sm-7 {
+		-ms-flex-preferred-size: 58.333%;
+		flex-basis: 58.333%;
+		max-width: 58.333%
+	}
+	.ish-col-sm-8 {
+		-ms-flex-preferred-size: 66.667%;
+		flex-basis: 66.667%;
+		max-width: 66.667%
+	}
+	.ish-col-sm-9 {
+		-ms-flex-preferred-size: 75%;
+		flex-basis: 75%;
+		max-width: 75%
+	}
+	.ish-col-sm-10 {
+		-ms-flex-preferred-size: 83.333%;
+		flex-basis: 83.333%;
+		max-width: 83.333%
+	}
+	.ish-col-sm-11 {
+		-ms-flex-preferred-size: 91.667%;
+		flex-basis: 91.667%;
+		max-width: 91.667%
+	}
+	.ish-col-sm-12 {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		max-width: 100%
+	}
+	.ish-col-sm-offset-0 {
+		margin-left: 0
+	}
+	.ish-col-sm-offset-1 {
+		margin-left: 8.333%
+	}
+	.ish-col-sm-offset-2 {
+		margin-left: 16.666%
+	}
+	.ish-col-sm-offset-3 {
+		margin-left: 25%
+	}
+	.ish-col-sm-offset-4 {
+		margin-left: 33.333%
+	}
+	.ish-col-sm-offset-5 {
+		margin-left: 41.667%
+	}
+	.ish-col-sm-offset-6 {
+		margin-left: 50%
+	}
+	.ish-col-sm-offset-7 {
+		margin-left: 58.333%
+	}
+	.ish-col-sm-offset-8 {
+		margin-left: 66.667%
+	}
+	.ish-col-sm-offset-9 {
+		margin-left: 75%
+	}
+	.ish-col-sm-offset-10 {
+		margin-left: 83.333%
+	}
+	.ish-col-sm-offset-11 {
+		margin-left: 91.667%
+	}
+	.ish-start-sm {
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		text-align: start
+	}
+	.ish-center-sm {
+		-ms-flex-pack: center;
+		justify-content: center;
+		text-align: center
+	}
+	.ish-end-sm {
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		text-align: end
+	}
+	.ish-top-sm {
+		-ms-flex-align: start;
+		align-items: flex-start
+	}
+	.ish-middle-sm {
+		-ms-flex-align: center;
+		align-items: center
+	}
+	.ish-bottom-sm {
+		-ms-flex-align: end;
+		align-items: flex-end
+	}
+	.ish-around-sm {
+		-ms-flex-pack: distribute;
+		justify-content: space-around
+	}
+	.ish-between-sm {
+		-ms-flex-pack: justify;
+		justify-content: space-between
+	}
+	.ish-first-sm {
+		-ms-flex-order: -1;
+		order: -1
+	}
+	.ish-last-sm {
+		-ms-flex-order: 1;
+		order: 1
+	}
+}
+
+@media only screen and (min-width: 64em) {
+	.ish-container {
+		width: 65rem
+	}
+	.ish-col-md,
+	.ish-col-md-1,
+	.ish-col-md-2,
+	.ish-col-md-3,
+	.ish-col-md-4,
+	.ish-col-md-5,
+	.ish-col-md-6,
+	.ish-col-md-7,
+	.ish-col-md-8,
+	.ish-col-md-9,
+	.ish-col-md-10,
+	.ish-col-md-11,
+	.ish-col-md-12,
+	.ish-col-md-offset-0,
+	.ish-col-md-offset-1,
+	.ish-col-md-offset-2,
+	.ish-col-md-offset-3,
+	.ish-col-md-offset-4,
+	.ish-col-md-offset-5,
+	.ish-col-md-offset-6,
+	.ish-col-md-offset-7,
+	.ish-col-md-offset-8,
+	.ish-col-md-offset-9,
+	.ish-col-md-offset-10,
+	.ish-col-md-offset-11,
+	.ish-col-md-offset-12 {
+		box-sizing: border-box;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem
+	}
+	.ish-col-md {
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		max-width: 100%
+	}
+	.ish-col-md-1 {
+		-ms-flex-preferred-size: 8.333%;
+		flex-basis: 8.333%;
+		max-width: 8.333%
+	}
+	.ish-col-md-2 {
+		-ms-flex-preferred-size: 16.666%;
+		flex-basis: 16.666%;
+		max-width: 16.666%
+	}
+	.ish-col-md-3 {
+		-ms-flex-preferred-size: 25%;
+		flex-basis: 25%;
+		max-width: 25%
+	}
+	.ish-col-md-4 {
+		-ms-flex-preferred-size: 33.333%;
+		flex-basis: 33.333%;
+		max-width: 33.333%
+	}
+	.ish-col-md-5 {
+		-ms-flex-preferred-size: 41.667%;
+		flex-basis: 41.667%;
+		max-width: 41.667%
+	}
+	.ish-col-md-6 {
+		-ms-flex-preferred-size: 50%;
+		flex-basis: 50%;
+		max-width: 50%
+	}
+	.ish-col-md-7 {
+		-ms-flex-preferred-size: 58.333%;
+		flex-basis: 58.333%;
+		max-width: 58.333%
+	}
+	.ish-col-md-8 {
+		-ms-flex-preferred-size: 66.667%;
+		flex-basis: 66.667%;
+		max-width: 66.667%
+	}
+	.ish-col-md-9 {
+		-ms-flex-preferred-size: 75%;
+		flex-basis: 75%;
+		max-width: 75%
+	}
+	.ish-col-md-10 {
+		-ms-flex-preferred-size: 83.333%;
+		flex-basis: 83.333%;
+		max-width: 83.333%
+	}
+	.ish-col-md-11 {
+		-ms-flex-preferred-size: 91.667%;
+		flex-basis: 91.667%;
+		max-width: 91.667%
+	}
+	.ish-col-md-12 {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		max-width: 100%
+	}
+	.ish-col-md-offset-0 {
+		margin-left: 0
+	}
+	.ish-col-md-offset-1 {
+		margin-left: 8.333%
+	}
+	.ish-col-md-offset-2 {
+		margin-left: 16.666%
+	}
+	.ish-col-md-offset-3 {
+		margin-left: 25%
+	}
+	.ish-col-md-offset-4 {
+		margin-left: 33.333%
+	}
+	.ish-col-md-offset-5 {
+		margin-left: 41.667%
+	}
+	.ish-col-md-offset-6 {
+		margin-left: 50%
+	}
+	.ish-col-md-offset-7 {
+		margin-left: 58.333%
+	}
+	.ish-col-md-offset-8 {
+		margin-left: 66.667%
+	}
+	.ish-col-md-offset-9 {
+		margin-left: 75%
+	}
+	.ish-col-md-offset-10 {
+		margin-left: 83.333%
+	}
+	.ish-col-md-offset-11 {
+		margin-left: 91.667%
+	}
+	.ish-start-md {
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		text-align: start
+	}
+	.ish-center-md {
+		-ms-flex-pack: center;
+		justify-content: center;
+		text-align: center
+	}
+	.ish-end-md {
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		text-align: end
+	}
+	.ish-top-md {
+		-ms-flex-align: start;
+		align-items: flex-start
+	}
+	.ish-middle-md {
+		-ms-flex-align: center;
+		align-items: center
+	}
+	.ish-bottom-md {
+		-ms-flex-align: end;
+		align-items: flex-end
+	}
+	.ish-around-md {
+		-ms-flex-pack: distribute;
+		justify-content: space-around
+	}
+	.ish-between-md {
+		-ms-flex-pack: justify;
+		justify-content: space-between
+	}
+	.ish-first-md {
+		-ms-flex-order: -1;
+		order: -1
+	}
+	.ish-last-md {
+		-ms-flex-order: 1;
+		order: 1
+	}
+}
+
+@media only screen and (min-width: 75em) {
+	.ish-container {
+		width: 76rem
+	}
+	.ish-col-lg,
+	.ish-col-lg-1,
+	.ish-col-lg-2,
+	.ish-col-lg-3,
+	.ish-col-lg-4,
+	.ish-col-lg-5,
+	.ish-col-lg-6,
+	.ish-col-lg-7,
+	.ish-col-lg-8,
+	.ish-col-lg-9,
+	.ish-col-lg-10,
+	.ish-col-lg-11,
+	.ish-col-lg-12,
+	.ish-col-lg-offset-0,
+	.ish-col-lg-offset-1,
+	.ish-col-lg-offset-2,
+	.ish-col-lg-offset-3,
+	.ish-col-lg-offset-4,
+	.ish-col-lg-offset-5,
+	.ish-col-lg-offset-6,
+	.ish-col-lg-offset-7,
+	.ish-col-lg-offset-8,
+	.ish-col-lg-offset-9,
+	.ish-col-lg-offset-10,
+	.ish-col-lg-offset-11,
+	.ish-col-lg-offset-12 {
+		box-sizing: border-box;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem
+	}
+	.ish-col-lg {
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		max-width: 100%
+	}
+	.ish-col-lg-1 {
+		-ms-flex-preferred-size: 8.333%;
+		flex-basis: 8.333%;
+		max-width: 8.333%
+	}
+	.ish-col-lg-2 {
+		-ms-flex-preferred-size: 16.666%;
+		flex-basis: 16.666%;
+		max-width: 16.666%
+	}
+	.ish-col-lg-3 {
+		-ms-flex-preferred-size: 25%;
+		flex-basis: 25%;
+		max-width: 25%
+	}
+	.ish-col-lg-4 {
+		-ms-flex-preferred-size: 33.333%;
+		flex-basis: 33.333%;
+		max-width: 33.333%
+	}
+	.ish-col-lg-5 {
+		-ms-flex-preferred-size: 41.667%;
+		flex-basis: 41.667%;
+		max-width: 41.667%
+	}
+	.ish-col-lg-6 {
+		-ms-flex-preferred-size: 50%;
+		flex-basis: 50%;
+		max-width: 50%
+	}
+	.ish-col-lg-7 {
+		-ms-flex-preferred-size: 58.333%;
+		flex-basis: 58.333%;
+		max-width: 58.333%
+	}
+	.ish-col-lg-8 {
+		-ms-flex-preferred-size: 66.667%;
+		flex-basis: 66.667%;
+		max-width: 66.667%
+	}
+	.ish-col-lg-9 {
+		-ms-flex-preferred-size: 75%;
+		flex-basis: 75%;
+		max-width: 75%
+	}
+	.ish-col-lg-10 {
+		-ms-flex-preferred-size: 83.333%;
+		flex-basis: 83.333%;
+		max-width: 83.333%
+	}
+	.ish-col-lg-11 {
+		-ms-flex-preferred-size: 91.667%;
+		flex-basis: 91.667%;
+		max-width: 91.667%
+	}
+	.ish-col-lg-12 {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		max-width: 100%
+	}
+	.ish-col-lg-offset-0 {
+		margin-left: 0
+	}
+	.ish-col-lg-offset-1 {
+		margin-left: 8.333%
+	}
+	.ish-col-lg-offset-2 {
+		margin-left: 16.666%
+	}
+	.ish-col-lg-offset-3 {
+		margin-left: 25%
+	}
+	.ish-col-lg-offset-4 {
+		margin-left: 33.333%
+	}
+	.ish-col-lg-offset-5 {
+		margin-left: 41.667%
+	}
+	.ish-col-lg-offset-6 {
+		margin-left: 50%
+	}
+	.ish-col-lg-offset-7 {
+		margin-left: 58.333%
+	}
+	.ish-col-lg-offset-8 {
+		margin-left: 66.667%
+	}
+	.ish-col-lg-offset-9 {
+		margin-left: 75%
+	}
+	.ish-col-lg-offset-10 {
+		margin-left: 83.333%
+	}
+	.ish-col-lg-offset-11 {
+		margin-left: 91.667%
+	}
+	.ish-start-lg {
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		text-align: start
+	}
+	.ish-center-lg {
+		-ms-flex-pack: center;
+		justify-content: center;
+		text-align: center
+	}
+	.ish-end-lg {
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		text-align: end
+	}
+	.ish-top-lg {
+		-ms-flex-align: start;
+		align-items: flex-start
+	}
+	.ish-middle-lg {
+		-ms-flex-align: center;
+		align-items: center
+	}
+	.ish-bottom-lg {
+		-ms-flex-align: end;
+		align-items: flex-end
+	}
+	.ish-around-lg {
+		-ms-flex-pack: distribute;
+		justify-content: space-around
+	}
+	.ish-between-lg {
+		-ms-flex-pack: justify;
+		justify-content: space-between
+	}
+	.ish-first-lg {
+		-ms-flex-order: -1;
+		order: -1
+	}
+	.ish-last-lg {
+		-ms-flex-order: 1;
+		order: 1
+	}
+}
+
+
+/*!-------------------------------------------------------------
+# Boilerplate Styles
+--------------------------------------------------------------*/
+
+
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+html {
+	color: #222;
+	font-size: 1em;
+	line-height: 1.4
+}
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0
+}
+
+textarea {
+	resize: vertical
+}
+
+.browserupgrade {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0
+}
+
+.hidden {
+	display: none !important
+}
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto
+}
+
+.invisible {
+	visibility: hidden
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table
+}
+
+.clearfix:after {
+	clear: both
+}
+
+@media print {
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important
+	}
+	a,
+	a:visited {
+		text-decoration: underline
+	}
+	a[href]:after {
+		content: " (" attr(href) ")"
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")"
+	}
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
+		content: ""
+	}
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid
+	}
+	thead {
+		display: table-header-group
+	}
+	tr,
+	img {
+		page-break-inside: avoid
+	}
+	img {
+		max-width: 100% !important
+	}
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3
+	}
+	h2,
+	h3 {
+		page-break-after: avoid
+	}
+}
+
+
+/*!-------------------------------------------------------------
+# Main Layout
+--------------------------------------------------------------*/
+
+.ish-vertical-middle,
+.ish-sticky-on .ish-logo-container a .ish-logo-box .ish-logo-middle,
+.ish-sticky-on .ish-menu-container a .ish-logo-box .ish-logo-middle,
+.ish-sticky-on .ish-logo-container a .ish-icon-nav i,
+.ish-sticky-on .ish-menu-container a .ish-icon-nav i,
+.site-header .ish-logo-container,
+.site-header .ish-menu-container {
+	display: table-cell;
+	float: none;
+	vertical-align: middle
+}
+
+@keyframes ish-back-to-top {
+	0% {
+		margin-left: 30px
+	}
+	10% {
+		margin-left: 60px
+	}
+	100% {
+		margin-left: 30px
+	}
+}
+
+* {
+	box-sizing: border-box
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	margin: 0
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+H1,
+H2,
+H3,
+H4,
+H5,
+H6,
+p,
+ul,
+ol,
+hr,
+pre,
+blockquote,
+.ish-sc-element {
+	margin-top: 0;
+	margin-bottom: 30px
+}
+
+pre {
+	margin-bottom: 40px
+}
+
+hr {
+	opacity: 0.2;
+	border: none;
+	height: 1px
+}
+
+img {
+	max-width: 100%;
+	height: auto
+}
+
+form input,
+form button,
+form textarea {
+	outline: none
+}
+
+form input.invalid,
+form button.invalid,
+form textarea.invalid {
+	box-shadow: none
+}
+
+mark {
+	padding: 2px 6px
+}
+
+a {
+	word-wrap: break-word;
+	transition: all 0.5s ease
+}
+
+.ish-blurred #page {
+	-webkit-filter: blur(30px);
+	-o-filter: blur(30px);
+	transition: all 500ms
+}
+
+.ish-blurred.ish-no-blur #page {
+	-o-filter: blur(0px);
+	-o-filter: none;
+	filter: none
+}
+
+.ish-blurred .ish-blurred-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 999
+}
+
+.ish-container-fluid,
+.ish-container-inner {
+	position: relative
+}
+
+.ish-container-fluid {
+	padding: 1rem;
+	z-index: 2
+}
+
+header .ish-container-fluid {
+	z-index: auto
+}
+
+.ish-container-inner {
+	max-width: 996px;
+	margin: 0 auto;
+	padding: 0 1rem
+}
+
+.ish-main-content {
+	width: 100%
+}
+
+.ish-main-content .ish-row:last-child *[class*="ish-col-"]:last-child>*:last-child {
+	margin-bottom: 0
+}
+
+.ish-row,
+.ish-container {
+	position: relative
+}
+
+.ish-container {
+	max-width: 996px;
+	margin: 0 auto;
+	padding: 16px
+}
+
+.ish-decor-container {
+	overflow: hidden;
+	height: 110px;
+	width: 100%
+}
+
+.ish-decor-container .ish-decor-bottom,
+.ish-decor-container .ish-decor-top {
+	position: relative;
+	width: 140%;
+	margin-left: 0;
+	margin-top: -10px;
+	height: 100%;
+	z-index: 1;
+	float: left
+}
+
+.ish-decor-container .ish-decor-top {
+	margin-top: 10px;
+	margin-right: 0;
+	box-shadow: 0 -10px 0 rgba(0, 0, 0, 0.1);
+	float: right
+}
+
+.ish-decor-container .ish-decor-bottom {
+	box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1)
+}
+
+.ish-vertical {
+	display: inline-block;
+	transform: rotate(-90deg)
+}
+
+.ish-theme-rotate {
+	transform: rotate(-10deg)
+}
+
+.ish-theme-rotate.ish-decor-bottom {
+	transform-origin: 0 100%
+}
+
+.ish-theme-rotate.ish-decor-top {
+	transform-origin: 100% 0
+}
+
+#content .ish-social-box {
+	margin-top: 50px
+}
+
+.ish-underline {
+	text-decoration: none;
+	position: relative;
+	display: inline-block
+}
+
+.ish-underline:before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 50%;
+	height: 2px;
+	width: 0;
+	transition: all 0.5s ease
+}
+
+.ish-underline.ish-underline-visible:before {
+	width: 100%;
+	left: 0
+}
+
+.ish-underline:hover:before {
+	width: 100%;
+	left: 0
+}
+
+.ish-underline.ish-underline-visible:hover:before {
+	width: 0;
+	left: 50%
+}
+
+.ish-img-scale {
+	overflow: hidden;
+	display: inline-block;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+	max-width: 100%
+}
+
+.ish-img-scale img {
+	max-width: 100%;
+	transition: all 0.5s ease;
+	transform: translateZ(0)
+}
+
+.ish-img-scale:hover img {
+	transform: scale(1.15) translateZ(0)
+}
+
+.ish-img-scale.ish-align-left {
+	margin: 0 1.5em 0.5em 0
+}
+
+.ish-img-scale.ish-align-right {
+	margin: 0 0 0.5em 1.2em
+}
+
+.ish-img-scale.ish-align-left,
+.ish-img-scale.ish-align-right {
+	float: none;
+	display: table;
+	margin-bottom: 40px
+}
+
+.ish-resp-center .ish-main-content,
+.ish-resp-center .ish-txt-align-left,
+.ish-resp-center .ish-txt-align-right,
+.ish-resp-center .ish-txt-align-center,
+.ish-resp-center .ish-sidebar {
+	text-align: center
+}
+
+.ish-resp-center .ish-img-scale.ish-align-left,
+.ish-resp-center .ish-img-scale.ish-align-right {
+	margin: 0 auto 40px
+}
+
+.ish-resp-center .ish-main-content ul,
+.ish-resp-center .ish-main-content ol {
+	text-align: left
+}
+
+.ish-resp-center pre {
+	text-align: left
+}
+
+.ish-txt-align-left,
+.ish-txt-align-right {
+	text-align: left
+}
+
+.ish-txt-align-center {
+	text-align: center
+}
+
+.ish-align-left {
+	float: left
+}
+
+.ish-align-right {
+	float: right
+}
+
+.required-error {
+	position: relative
+}
+
+.required-error:after {
+	content: 'This field must be filled in!';
+	display: inline-block;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 10px
+}
+
+.ish-contact-info-container {
+	margin-bottom: 30px
+}
+
+.ish-contact-info-container .ish-contact-info-box>div {
+	margin-bottom: 50px;
+	word-wrap: break-word
+}
+
+.ish-contact-form-box legend {
+	margin-bottom: 50px
+}
+
+.ish-contact-form-box legend h3 {
+	margin-top: 0
+}
+
+.ish-contact-form-box .required-error {
+	position: relative
+}
+
+.ish-contact-form-box .required-error:after {
+	content: 'This field must be filled in!';
+	position: absolute;
+	bottom: 0;
+	margin-bottom: -10px;
+	left: 0
+}
+
+.ish-contact-form-box input,
+.ish-contact-form-box button,
+.ish-contact-form-box textarea {
+	width: 100%;
+	border: none;
+	border-top: solid 1px;
+	line-height: 2;
+	margin-bottom: 20px;
+	background: none;
+	text-align: left;
+	-webkit-appearance: none;
+	border-radius: 0
+}
+
+.ish-contact-form-box textarea {
+	height: 150px
+}
+
+.ish-contact-form-box button[type="submit"] {
+	transition: all 0.5s ease
+}
+
+.ish-contact-form-box button[type="submit"] i {
+	transition: all 0.5s ease
+}
+
+.ish-contact-form-box button[type="submit"]:hover i {
+	margin-left: 30px
+}
+
+.ish-no-content header {
+	margin-bottom: -400px
+}
+
+.ish-menu-container a {
+	text-decoration: none
+}
+
+.ish-sticky-on.site-header .ish-header {
+	position: fixed;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	margin-top: 0
+}
+
+.ish-sticky-on.site-header .ish-logo-container,
+.ish-sticky-on.site-header .ish-menu-container {
+	vertical-align: top;
+	padding: 10px;
+	width: auto;
+	display: inline-block
+}
+
+.ish-sticky-on.site-header .ish-logo-container .ish-theme-tagline,
+.ish-sticky-on.site-header .ish-logo-container .ish-menu-desc,
+.ish-sticky-on.site-header .ish-menu-container .ish-theme-tagline,
+.ish-sticky-on.site-header .ish-menu-container .ish-menu-desc {
+	display: none
+}
+
+.ish-sticky-on.site-header .ish-menu-container {
+	float: right
+}
+
+.ish-sticky-on.site-header .ish-menu-container .ish-icon-nav i {
+	float: none
+}
+
+.ish-sticky-on .ish-logo-container a,
+.ish-sticky-on .ish-menu-container a {
+	display: inline-block
+}
+
+.ish-sticky-on .ish-logo-container a .ish-logo-box,
+.ish-sticky-on .ish-logo-container a .ish-icon-nav,
+.ish-sticky-on .ish-menu-container a .ish-logo-box,
+.ish-sticky-on .ish-menu-container a .ish-icon-nav {
+	text-align: center;
+	display: table;
+	border-radius: 3px
+}
+
+.ish-sticky-on .ish-logo-container a .ish-logo-box span,
+.ish-sticky-on .ish-logo-container a .ish-icon-nav,
+.ish-sticky-on .ish-menu-container a .ish-logo-box span,
+.ish-sticky-on .ish-menu-container a .ish-icon-nav {
+	width: 80px;
+	height: 80px;
+	padding: 0
+}
+
+.ish-sticky-on .ish-logo-container a .ish-logo-box .ish-logo,
+.ish-sticky-on .ish-menu-container a .ish-logo-box .ish-logo {
+	margin: 0 auto;
+	max-width: 80px;
+	max-height: 80px;
+	width: 30px
+}
+
+.site-header .ish-header {
+	margin-top: 50px;
+	display: table;
+	width: 100%;
+	z-index: 99
+}
+
+.site-header .site-branding {
+	max-width: 100%
+}
+
+.site-header .ish-logo-container,
+.site-header .ish-menu-container {
+	position: relative;
+	width: 50%;
+	height: 100%
+}
+
+.site-header .ish-logo-container .ish-vertical,
+.site-header .ish-menu-container .ish-vertical {
+	transform: rotate(0deg)
+}
+
+.site-header .ish-logo-container .ish-menu-desc,
+.site-header .ish-logo-container .ish-theme-tagline,
+.site-header .ish-menu-container .ish-menu-desc,
+.site-header .ish-menu-container .ish-theme-tagline {
+	position: relative;
+	display: none;
+	padding: 0 50px;
+	text-align: right;
+	width: auto
+}
+
+.site-header .ish-logo-container {
+	width: 70%
+}
+
+.site-header .ish-logo-container .ish-logo {
+	max-width: 140px;
+	max-height: 140px
+}
+
+.site-header .ish-logo-container a {
+	text-decoration: none
+}
+
+.site-header .ish-menu-container {
+	text-align: right
+}
+
+.site-header .ish-menu-container .ish-icon-nav i {
+	float: right
+}
+
+.site-header .site-title {
+	margin: 50px 0 20px
+}
+
+.site-header .site-subtitle {
+	margin: 40px 0
+}
+
+.site-header .site-description {
+	margin-bottom: 0
+}
+
+.ish-navigation {
+	opacity: 0
+}
+
+.ish-navigation ::-webkit-scrollbar {
+	width: 12px;
+	height: 12px
+}
+
+.ish-navigation ::-webkit-scrollbar-thumb {
+	background: #a8a8a8;
+	border-radius: 5.6px;
+	border: 4px solid transparent;
+	background-clip: padding-box
+}
+
+.ish-navigation ::-webkit-scrollbar-track {
+	background: none
+}
+
+.ish-navigation body {
+	scrollbar-face-color: #a8a8a8;
+	scrollbar-track-color: none
+}
+
+.ish-navigation.ish-nav-on {
+	transition: all 0.5s ease;
+	right: 0
+}
+
+.ish-navigation {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: -100%;
+	z-index: 99;
+	transition: all 0.5s ease;
+	transform-origin: 100% 200%;
+	-webkit-overflow-scrolling: touch
+}
+
+.ish-navigation a {
+	text-decoration: none
+}
+
+.ish-navigation .ish-nav-bg {
+	display: none;
+	height: 150%
+}
+
+.ish-navigation .ish-nav-close {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	text-decoration: none;
+	display: inline-block;
+	z-index: 99;
+	border-radius: 3px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}
+
+.ish-navigation .ish-nav-container-bg {
+	width: 100%;
+	height: 100%;
+	float: right
+}
+
+.ish-navigation .ish-nav-container-bg .ish-nav-container {
+	position: relative;
+	overflow-y: scroll;
+	height: 100%;
+	text-align: right;
+	width: 100%;
+	padding: 10%;
+	-webkit-overflow-scrolling: touch
+}
+
+.ish-navigation .main-navigation ul {
+	margin-bottom: 0
+}
+
+.ish-navigation ul {
+	list-style: none;
+	padding-left: 0
+}
+
+.ish-navigation ul ul {
+	display: none
+}
+
+.ish-navigation ul ul ul {
+	margin-right: 20px
+}
+
+.ish-navigation ul li {
+	line-height: 2.5
+}
+
+.ish-navigation ul li a {
+	position: relative;
+	display: inline-block
+}
+
+.ish-navigation ul li a span {
+	position: relative;
+	display: inline-block
+}
+
+.ish-navigation ul li.ish-active-item>a>span:before,
+.ish-navigation ul li.ish-hover>a>span:before {
+	width: 100%;
+	left: 0;
+	transition: all 0.5s ease
+}
+
+.ish-navigation ul li.ish-has-submenu>a:before {
+	content: '.';
+	bottom: 0;
+	left: -10px
+}
+
+.ish-navigation ul li span:before {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 2px;
+	left: 50%;
+	bottom: -2px;
+	transition: all 0.5s ease;
+	bottom: 8px;
+	left: 100%
+}
+
+.ish-footer {
+	text-align: center
+}
+
+.ish-footer a {
+	text-decoration: none;
+	position: relative
+}
+
+.ish-footer .ish-social-box>span {
+	margin-bottom: 20px
+}
+
+.ish-footer .ish-separator {
+	display: inline-block;
+	width: 100%;
+	padding: 0 20px
+}
+
+.ish-back-to-top {
+	position: relative
+}
+
+.ish-back-to-top a {
+	transform: rotate(-90deg);
+	transform-origin: 0 50%;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	bottom: -24px;
+	width: 200px;
+	text-decoration: none;
+	padding: 10px 0
+}
+
+.ish-back-to-top a span {
+	position: relative;
+	display: inline-block
+}
+
+.ish-back-to-top a span:before {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 2px;
+	left: 50%;
+	bottom: -2px;
+	transition: all 0.5s ease;
+	left: 0
+}
+
+.ish-back-to-top a.ish-hover span:before {
+	width: 100%;
+	transition: all 0.5s ease
+}
+
+.ish-back-to-top a.ish-hover i {
+	margin-left: 50px
+}
+
+.ish-back-to-top i {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 30px;
+	transition: all 500ms
+}
+
+.ish-results {
+	counter-reset: search-results
+}
+
+.ish-results .ish-result {
+	position: relative;
+	padding-top: 126px;
+	min-height: 86px;
+	margin-bottom: 100px
+}
+
+.ish-results .ish-result p,
+.ish-results .ish-result .ish-title {
+	margin: 0
+}
+
+.ish-results .ish-result .ish-title {
+	margin-top: 10px
+}
+
+.ish-results .ish-result .ish-title a {
+	text-decoration: none
+}
+
+.ish-results .ish-result:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 86px;
+	height: 86px;
+	line-height: 86px;
+	text-align: center;
+	background: darkolivegreen;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+	float: left;
+	counter-increment: search-results;
+	content: counter(search-results, decimal-leading-zero)
+}
+
+.ish-resp-center .ish-result:before {
+	left: calc(50% - 43px)
+}
+
+#comments .comment-content p {
+	margin-bottom: 50px
+}
+
+.comment-list {
+	list-style: none;
+	padding-left: 0
+}
+
+.comment-list .children {
+	list-style: none
+}
+
+.comment-meta {
+	margin-bottom: 15px
+}
+
+.comment-author,
+.comment-metadata {
+	display: inline;
+	font-size: 14px
+}
+
+.comment-author {
+	margin-right: 8px
+}
+
+.comment-author img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 20px
+}
+
+.comment-metadata a {
+	opacity: 0.5;
+	transition-duration: 0.3s
+}
+
+.comment-metadata a:hover {
+	opacity: 1
+}
+
+.comment-metadata>* {
+	margin-right: 8px
+}
+
+.comment-metadata:last-child {
+	margin-right: 0
+}
+
+.comment-navigation {
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 14px
+}
+
+.comment-navigation a,
+.comment-navigation span {
+	display: inline-block;
+	padding: 0 5px
+}
+
+.comment-navigation a {
+	text-decoration: none;
+	opacity: 0.5;
+	transition-duration: 0.3s
+}
+
+.comment-navigation a:hover {
+	opacity: 1
+}
+
+.comment-navigation span.current {
+	text-decoration: line-through
+}
+
+.comment-respond label {
+	display: none
+}
+
+.comment-respond input,
+.comment-respond textarea {
+	width: 100%;
+	min-height: 50px;
+	padding: 15px 22px;
+	border-radius: 3px;
+	border: none;
+	display: block;
+	font-size: 16px;
+	transition-duration: 0.3s
+}
+
+.comment-respond form p[class*="comment-form-"] {
+	margin-bottom: 10px
+}
+
+.site-content {
+	position: relative
+}
+
+.ish-separator {
+	padding: 0 8px
+}
+
+.ish-pagination-container {
+	margin-bottom: -12vw;
+	margin-top: 50px;
+	z-index: 3
+}
+
+.ish-pagination {
+	position: relative
+}
+
+.ish-nav-links {
+	transform: rotate(-10deg);
+	transform-origin: top left;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: inline-block
+}
+
+.ish-page-numbers {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	text-indent: -999em;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.3s
+}
+
+.ish-page-numbers:first-child {
+	margin-left: 0
+}
+
+.ish-page-numbers:before {
+	position: absolute;
+	text-indent: 0;
+	top: 50%;
+	left: 50%;
+	padding: 0;
+	margin: -0.5em 0 0 -0.5em !important
+}
+
+.post-meta {
+	list-style: none;
+	padding: 0
+}
+
+.post-meta li {
+	margin-bottom: 30px
+}
+
+.post-meta-key {
+	display: block
+}
+
+pre {
+	padding: 20px;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1)
+}
+
+iframe {
+	border: none;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1)
+}
+
+blockquote {
+	width: 100%;
+	font-style: italic;
+	text-align: center;
+	margin-left: 0;
+	padding: 30px
+}
+
+blockquote:before,
+blockquote:after {
+	content: " ";
+	display: block;
+	width: 100px;
+	height: 3px;
+	margin: 0 auto;
+	position: relative
+}
+
+blockquote:before {
+	top: -30px
+}
+
+blockquote:after {
+	top: 30px
+}
+
+.ish-sc-gallery.justified-gallery {
+	overflow: visible
+}
+
+.ish-sc-gallery.justified-gallery>a>.caption,
+.ish-sc-gallery.justified-gallery>div>.caption {
+	padding: 6px 12px
+}
+
+.ish-sc-gallery a {
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden
+}
+
+.ish-sc-gallery a img {
+	transition: all .5s ease !important;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0)
+}
+
+.ish-sc-gallery a:hover img {
+	transform: scale(1.15) translateZ(0)
+}
+
+.ish-widget-element {
+	margin-bottom: 30px
+}
+
+.ish-search-form {
+	position: relative
+}
+
+.ish-search-form label {
+	display: none
+}
+
+.ish-search-form input,
+.ish-search-form button {
+	background: none;
+	border: none;
+	line-height: normal;
+	border-radius: 3px
+}
+
+.ish-search-form input {
+	text-align: right;
+	width: 100%;
+	height: 44px;
+	padding: 10px 48px 10px 20px
+}
+
+.ish-search-form button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+	transition: all 0.5s ease
+}
+
+.ish-social-box>span {
+	margin-bottom: 28px
+}
+
+.ish-social-box>span a,
+.ish-social-box>span a:hover {
+	transition: all 0.5s ease
+}
+
+.page-with-sidebar .ish-main-content {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	max-width: 100%
+}
+
+.page-with-sidebar .ish-sidebar {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	max-width: 100%
+}
+
+.ish-sidebar {
+	padding-top: 30px;
+	position: relative;
+	border-top: 1px solid
+}
+
+.ish-sidebar H1,
+.ish-sidebar H2,
+.ish-sidebar H3,
+.ish-sidebar H4,
+.ish-sidebar H5,
+.ish-sidebar H6,
+.ish-sidebar p,
+.ish-sidebar ul,
+.ish-sidebar ol,
+.ish-sidebar hr,
+.ish-sidebar blockquote,
+.ish-sidebar .ish-sc-element,
+.ish-sidebar .widget-title {
+	margin-top: 0;
+	margin-bottom: 20px
+}
+
+.ish-sidebar .ish-widget-element {
+	margin-bottom: 50px
+}
+
+.ish-sidebar .ish-widget-element .ish-read-more {
+	opacity: 0.5
+}
+
+.ish-sidebar .ish-widget-element .ish-read-more:hover {
+	opacity: 1
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-search input {
+	text-align: left
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-projects {
+	display: inline-block;
+	list-style: none;
+	padding-left: 0
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-projects li {
+	width: 33%;
+	display: inline-block;
+	overflow: hidden;
+	float: left;
+	transition: all 0.5s ease
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-projects li:hover {
+	opacity: 0.5
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-projects li img.landscape {
+	max-width: none;
+	height: 100%;
+	width: auto
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-projects li img.portrait {
+	max-height: none;
+	width: 100%;
+	height: auto
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-posts {
+	list-style: none;
+	padding-left: 0
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-posts a {
+	text-decoration: none;
+	line-height: normal
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-posts .post-date {
+	width: 100%;
+	display: block;
+	opacity: 0.5
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-tweets .tweet {
+	padding: 1em 0
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-tweets .tweet .tweet-details {
+	margin-top: 6px
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-tweets .tweet .tweet-details a {
+	opacity: 0.5
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-tweets .tweet .tweet-details a:hover {
+	opacity: 1
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-recent-tweets a {
+	text-decoration: none;
+	line-height: normal;
+	white-space: normal
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-social>span {
+	margin-right: 12px
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-social a {
+	opacity: 0.5;
+	text-decoration: none
+}
+
+.ish-sidebar .ish-widget-element .ish-widget-social a:hover {
+	opacity: 1
+}
+
+#map {
+	width: 100%;
+	height: 400px;
+	margin-top: -400px;
+	margin-bottom: -390px;
+	z-index: 0
+}
+
+#map h1,
+#map h2,
+#map h3,
+#map h4,
+#map h5,
+#map h6,
+#map p,
+#map span,
+#map div,
+#map a {
+	margin: 0
+}
+
+#map h1,
+#map h2,
+#map h3,
+#map h4,
+#map h5,
+#map h6,
+#map p {
+	margin-bottom: 10px
+}
+
+#map .ish-marker-info>*:last-child {
+	margin: 0
+}
+
+.map-marker {
+	display: none
+}
+
+
+/*!-------------------------------------------------------------
+# Shortcodes
+--------------------------------------------------------------*/
+
+a.ish-sc-element,
+.ish-sc-element a {
+	transition: all 0.5s ease
+}
+
+.ish-row.ish-col-leaning-2>*[class*="ish-col-"]:nth-child(1) {
+	margin-top: 86px
+}
+
+.ish-row.ish-col-leaning-3>*[class*="ish-col-"]:nth-child(1) {
+	margin-top: 114px
+}
+
+.ish-row.ish-col-leaning-3>*[class*="ish-col-"]:nth-child(2) {
+	margin-top: 57px
+}
+
+.ish-row.ish-col-leaning-4>*[class*="ish-col-"]:nth-child(1) {
+	margin-top: 129px
+}
+
+.ish-row.ish-col-leaning-4>*[class*="ish-col-"]:nth-child(2) {
+	margin-top: 86px
+}
+
+.ish-row.ish-col-leaning-4>*[class*="ish-col-"]:nth-child(3) {
+	margin-top: 43px
+}
+
+.ish-sc-button {
+	padding: 20px;
+	border-radius: 3px;
+	display: inline-block;
+	text-decoration: none
+}
+
+.ish-sc-button.ish-btn-small {
+	padding: 10px
+}
+
+.ish-sc-button.ish-btn-medium {
+	padding: 14px 20px
+}
+
+.ish-sc-button.ish-btn-large {
+	padding: 20px 30px
+}
+
+.ish-sc-icon a {
+	text-decoration: none
+}
+
+.ish-sc-accordion H1,
+.ish-sc-accordion H2,
+.ish-sc-accordion H3,
+.ish-sc-accordion H4,
+.ish-sc-accordion H5,
+.ish-sc-accordion H6,
+.ish-sc-accordion p,
+.ish-sc-accordion ul,
+.ish-sc-accordion ol,
+.ish-sc-accordion hr,
+.ish-sc-accordion blockquote,
+.ish-sc-accordion .ish-sc-element,
+.ish-sc-toggle H1,
+.ish-sc-toggle H2,
+.ish-sc-toggle H3,
+.ish-sc-toggle H4,
+.ish-sc-toggle H5,
+.ish-sc-toggle H6,
+.ish-sc-toggle p,
+.ish-sc-toggle ul,
+.ish-sc-toggle ol,
+.ish-sc-toggle hr,
+.ish-sc-toggle blockquote,
+.ish-sc-toggle .ish-sc-element,
+.ish-sc-tabs H1,
+.ish-sc-tabs H2,
+.ish-sc-tabs H3,
+.ish-sc-tabs H4,
+.ish-sc-tabs H5,
+.ish-sc-tabs H6,
+.ish-sc-tabs p,
+.ish-sc-tabs ul,
+.ish-sc-tabs ol,
+.ish-sc-tabs hr,
+.ish-sc-tabs blockquote,
+.ish-sc-tabs .ish-sc-element {
+	margin: 20px 0
+}
+
+.ish-sc-accordion dt,
+.ish-sc-accordion dd,
+.ish-sc-toggle dt,
+.ish-sc-toggle dd {
+	border: 1px solid
+}
+
+.ish-sc-accordion dt a,
+.ish-sc-accordion dd a,
+.ish-sc-toggle dt a,
+.ish-sc-toggle dd a {
+	display: block;
+	padding: 10px;
+	text-decoration: none
+}
+
+.ish-sc-accordion dt,
+.ish-sc-toggle dt {
+	margin-top: 10px;
+	transition: all 0.5s ease;
+	border-radius: 3px
+}
+
+.ish-sc-accordion dt:first-of-type,
+.ish-sc-toggle dt:first-of-type {
+	margin-top: 0
+}
+
+.ish-sc-accordion dt.ish-active-item,
+.ish-sc-toggle dt.ish-active-item {
+	border-radius: 3px 3px 0 0
+}
+
+.ish-sc-accordion dt.ish-active-item i,
+.ish-sc-toggle dt.ish-active-item i {
+	transform: rotate(90deg);
+	display: inline-block;
+	transform-origin: 50% 50%
+}
+
+.ish-sc-accordion dd,
+.ish-sc-toggle dd {
+	display: none;
+	padding: 10px 30px;
+	margin: 0 0 10px 0;
+	border-radius: 0 0 3px 3px
+}
+
+.ish-sc-tabs .ish-tabs-menu {
+	-webkit-padding-start: 0;
+	margin: 0;
+	padding: 0;
+	display: block
+}
+
+.ish-sc-tabs .ish-tabs-menu li {
+	display: inline-block;
+	float: left;
+	border: solid 1px;
+	border-color: rgba(255, 255, 255, 0);
+	border-radius: 3px 3px 0 0;
+	transition: all 0.5s ease
+}
+
+.ish-sc-tabs .ish-tabs-menu li a {
+	padding: 10px 20px;
+	text-decoration: none;
+	display: inline-block
+}
+
+.ish-sc-tabs .ish-tabs {
+	display: inline-block;
+	border: solid 1px;
+	border-radius: 0 3px 3px 3px
+}
+
+.ish-sc-tabs .ish-tabs>div {
+	display: none
+}
+
+.ish-sc-tabs .ish-tabs>div:first-child {
+	display: block
+}
+
+.ish-sc-tabs .ish-tabs .ish-tab-content {
+	padding: 10px 30px
+}
+
+
+/*!-------------------------------------------------------------
+# Google Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Varela Round';
+	font-style: normal;
+	font-weight: 400;
+	src: url(font/Varela_Round-normal-400.woff) format("woff")
+}
+
+
+/*!-------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+body,
+#map * {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 18px;
+	line-height: calc(30 / 18);
+	font-weight: normal
+}
+
+h1,
+.ish-h1,
+#map h1 {
+	font-size: 50px;
+	line-height: calc(100 / 90);
+	font-weight: normal
+}
+
+h2,
+.ish-h2,
+#map h2,
+.ish-sc-icon.ish-icon-large,
+.ish-result:before {
+	font-size: 40px;
+	line-height: calc(70 / 60);
+	font-weight: normal
+}
+
+h3,
+.ish-h3,
+#map h3,
+.ish-sc-icon.ish-icon-medium {
+	font-size: 30px;
+	line-height: calc(50 / 40);
+	font-weight: normal
+}
+
+h4,
+.ish-h4,
+#map h4,
+.site-description,
+.ish-icon-nav i,
+.ish-portfolio-navigation {
+	font-size: 25px;
+	line-height: calc(35 / 25);
+	font-weight: normal
+}
+
+h5,
+.ish-h5,
+#map h5,
+.post-meta-key,
+.ish-footer .ish-social-box,
+.ish-sc-icon.ish-icon-small,
+.ish-sc-button.ish-btn-large {
+	font-size: 20px;
+	line-height: calc(30 / 20);
+	font-weight: normal
+}
+
+h6,
+.ish-h6,
+#map h6,
+.ish-pflo-gal.ish-2col .ish-title,
+.ish-navigation ul ul,
+.ish-footer .ish-legals,
+.ish-sc-button.ish-btn-medium {
+	font-size: 16px;
+	line-height: calc(25 / 16);
+	font-weight: normal
+}
+
+#map h4,
+#map h5,
+#map h6 {
+	font-size: 15px
+}
+
+#map p,
+#map div,
+#map span,
+#map i,
+#map a {
+	font-size: 12px
+}
+
+.required-error:before,
+.required-error:after,
+.ish-sc-button.ish-btn-small,
+.ish-blog .ish-blog-post-details {
+	font-size: 14px
+}
+
+.ish-widget-recent-posts .post-date,
+.ish-widget-recent-tweets .tweet-details {
+	font-size: 12px;
+	line-height: normal
+}
+
+.ish-nav-close i,
+.ish-back-to-top i,
+.ish-contact-info-container i {
+	font-size: 120%
+}
+
+header .ish-tagline-widget {
+	font-weight: 600
+}
+
+.ish-sc-button {
+	line-height: 1
+}
+
+.justified-gallery>a>.caption,
+.justified-gallery>div>.caption {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 14px;
+	line-height: calc(30 / 18);
+	font-weight: normal
+}
+
+@media only screen and (min-width: 768px) {
+	h1,
+	.ish-h1,
+	#map h1 {
+		font-size: 70px
+	}
+	h2,
+	.ish-h2,
+	#map h2 {
+		font-size: 50px
+	}
+	h3,
+	.ish-h3,
+	#map h3 {
+		font-size: 35px
+	}
+	#map h4 {
+		font-size: 25px
+	}
+	#map h5 {
+		font-size: 20px
+	}
+	#map h6 {
+		font-size: 16px
+	}
+	#map p,
+	#map div,
+	#map span,
+	#map i,
+	#map a {
+		font-size: 18px
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	h1,
+	.ish-h1,
+	#map h1 {
+		font-size: 90px
+	}
+	h2,
+	.ish-h2,
+	#map h2 {
+		font-size: 60px
+	}
+	h3,
+	.ish-h3,
+	#map h3 {
+		font-size: 40px
+	}
+}
+
+
+/*!-------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'ish-icons';
+	src: url("font/ish-icons.eot?86514304");
+	src: url("font/ish-icons.eot?86514304#iefix") format("embedded-opentype"), url("font/ish-icons.woff?86514304") format("woff"), url("font/ish-icons.ttf?86514304") format("truetype"), url("font/ish-icons.svg?86514304#ish-icons") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+
+[class^="ish-icon-"]:before,
+[class*=" ish-icon-"]:before {
+	font-family: "ish-icons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.ish-icon-search:before {
+	content: '\e800'
+}
+
+.ish-icon-mail:before {
+	content: '\e801'
+}
+
+.ish-icon-mail-alt:before {
+	content: '\e802'
+}
+
+.ish-icon-heart:before {
+	content: '\e803'
+}
+
+.ish-icon-heart-empty:before {
+	content: '\e804'
+}
+
+.ish-icon-dropbox:before {
+	content: '\e805'
+}
+
+.ish-icon-drupal:before {
+	content: '\e806'
+}
+
+.ish-icon-menu:before {
+	content: '\e807'
+}
+
+.ish-icon-cog:before {
+	content: '\e808'
+}
+
+.ish-icon-cog-alt:before {
+	content: '\e809'
+}
+
+.ish-icon-wrench:before {
+	content: '\e80a'
+}
+
+.ish-icon-basket:before {
+	content: '\e80b'
+}
+
+.ish-icon-ok:before {
+	content: '\e80c'
+}
+
+.ish-icon-cancel:before {
+	content: '\e80d'
+}
+
+.ish-icon-plus:before {
+	content: '\e80e'
+}
+
+.ish-icon-minus:before {
+	content: '\e80f'
+}
+
+.ish-icon-user:before {
+	content: '\e810'
+}
+
+.ish-icon-user-plus:before {
+	content: '\e811'
+}
+
+.ish-icon-github-circled:before {
+	content: '\e812'
+}
+
+.ish-icon-github-squared:before {
+	content: '\e813'
+}
+
+.ish-icon-comment:before {
+	content: '\e814'
+}
+
+.ish-icon-comment-empty:before {
+	content: '\e815'
+}
+
+.ish-icon-github-1:before {
+	content: '\e816'
+}
+
+.ish-icon-linux:before {
+	content: '\e817'
+}
+
+.ish-icon-reddit:before {
+	content: '\e818'
+}
+
+.ish-icon-renren:before {
+	content: '\e819'
+}
+
+.ish-icon-angle-left:before {
+	content: '\e81a'
+}
+
+.ish-icon-angle-right:before {
+	content: '\e81b'
+}
+
+.ish-icon-angle-up:before {
+	content: '\e81c'
+}
+
+.ish-icon-angle-down:before {
+	content: '\e81d'
+}
+
+.ish-icon-phone:before {
+	content: '\e81e'
+}
+
+.ish-icon-slack:before {
+	content: '\e81f'
+}
+
+.ish-icon-whatsapp:before {
+	content: '\e820'
+}
+
+.ish-icon-stackoverflow-1:before {
+	content: '\e821'
+}
+
+.ish-icon-twitch:before {
+	content: '\e822'
+}
+
+.ish-icon-home:before {
+	content: '\e823'
+}
+
+.ish-icon-behance:before {
+	content: '\e824'
+}
+
+.ish-icon-gplus:before {
+	content: '\e825'
+}
+
+.ish-icon-skype:before {
+	content: '\e826'
+}
+
+.ish-icon-twitter:before {
+	content: '\e827'
+}
+
+.ish-icon-wordpress:before {
+	content: '\e828'
+}
+
+.ish-icon-youtube:before {
+	content: '\e829'
+}
+
+.ish-icon-pinterest:before {
+	content: '\e82a'
+}
+
+.ish-icon-facebook:before {
+	content: '\e82b'
+}
+
+.ish-icon-instagram:before {
+	content: '\e82c'
+}
+
+.ish-icon-cancel-1:before {
+	content: '\e82d'
+}
+
+.ish-icon-ok-1:before {
+	content: '\e82e'
+}
+
+.ish-icon-plus-1:before {
+	content: '\e82f'
+}
+
+.ish-icon-minus-1:before {
+	content: '\e830'
+}
+
+.ish-icon-right-open-1:before {
+	content: '\e831'
+}
+
+.ish-icon-left-open-1:before {
+	content: '\e832'
+}
+
+.ish-icon-windows:before {
+	content: '\e833'
+}
+
+.ish-icon-xing:before {
+	content: '\e834'
+}
+
+.ish-icon-down-small:before {
+	content: '\e835'
+}
+
+.ish-icon-left-small:before {
+	content: '\e836'
+}
+
+.ish-icon-right-small:before {
+	content: '\e837'
+}
+
+.ish-icon-up-small:before {
+	content: '\e838'
+}
+
+.ish-icon-linkedin:before {
+	content: '\e839'
+}
+
+.ish-icon-dribbble:before {
+	content: '\e83a'
+}
+
+.ish-icon-tumblr:before {
+	content: '\e83b'
+}
+
+.ish-icon-vimeo-squared:before {
+	content: '\e83c'
+}
+
+.ish-icon-digg:before {
+	content: '\e83d'
+}
+
+.ish-icon-css3:before {
+	content: '\e83e'
+}
+
+.ish-icon-apple:before {
+	content: '\e83f'
+}
+
+.ish-icon-credit-card:before {
+	content: '\e840'
+}
+
+.ish-icon-html5:before {
+	content: '\e841'
+}
+
+.ish-icon-star:before {
+	content: '\e842'
+}
+
+.ish-icon-star-empty:before {
+	content: '\e843'
+}
+
+.ish-icon-star-half-alt:before {
+	content: '\e844'
+}
+
+.ish-icon-code:before {
+	content: '\e845'
+}
+
+.ish-icon-angle-double-left:before {
+	content: '\e846'
+}
+
+.ish-icon-angle-double-right:before {
+	content: '\e847'
+}
+
+.ish-icon-angle-double-up:before {
+	content: '\e848'
+}
+
+.ish-icon-angle-double-down:before {
+	content: '\e849'
+}
+
+.ish-icon-cloud-sun-inv:before {
+	content: '\e84a'
+}
+
+.ish-icon-cloud-inv:before {
+	content: '\e84b'
+}
+
+.ish-icon-sun-inv:before {
+	content: '\e84c'
+}
+
+.ish-icon-lightbulb:before {
+	content: '\e84d'
+}
+
+.ish-icon-umbrella:before {
+	content: '\e84e'
+}
+
+.ish-icon-infinity:before {
+	content: '\e84f'
+}
+
+.ish-icon-hourglass:before {
+	content: '\e850'
+}
+
+.ish-icon-bicycle:before {
+	content: '\e851'
+}
+
+.ish-icon-art-gallery:before {
+	content: '\e852'
+}
+
+.ish-icon-wheelchair:before {
+	content: '\e853'
+}
+
+.ish-icon-globe:before {
+	content: '\e854'
+}
+
+.ish-icon-location:before {
+	content: '\e855'
+}
+
+
+/*!-------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+
+.ish-txt-color1 {
+	color: #7040ED
+}
+
+.ish-bg-color1 {
+	background-color: #7040ED
+}
+
+.ish-txt-color2 {
+	color: #515151
+}
+
+.ish-bg-color2 {
+	background-color: #515151
+}
+
+.ish-txt-color3 {
+	color: #fcfcfc
+}
+
+.ish-bg-color3 {
+	background-color: #fcfcfc
+}
+
+.ish-txt-color4 {
+	color: #fff
+}
+
+.ish-bg-color4 {
+	background-color: #fff
+}
+
+.ish-txt-color5 {
+	color: #7cd3ce
+}
+
+.ish-bg-color5 {
+	background-color: #7cd3ce
+}
+
+.ish-txt-color6 {
+	color: #1cbbe3
+}
+
+.ish-bg-color6 {
+	background-color: #1cbbe3
+}
+
+.ish-txt-color7 {
+	color: #c2bcb5
+}
+
+.ish-bg-color7 {
+	background-color: #c2bcb5
+}
+
+.ish-txt-color8 {
+	color: #5dc4be
+}
+
+.ish-bg-color8 {
+	background-color: #5dc4be
+}
+
+.ish-txt-color9 {
+	color: #dd613b
+}
+
+.ish-bg-color9 {
+	background-color: #dd613b
+}
+
+.ish-txt-color10 {
+	color: #a1744f
+}
+
+.ish-bg-color10 {
+	background-color: #a1744f
+}
+
+.ish-txt-color11 {
+	color: #37bdb6
+}
+
+.ish-bg-color11 {
+	background-color: #37bdb6
+}
+
+.ish-txt-color12 {
+	color: #bda949
+}
+
+.ish-bg-color12 {
+	background-color: #bda949
+}
+
+.ish-txt-color13 {
+	color: #f3d600
+}
+
+.ish-bg-color13 {
+	background-color: #f3d600
+}
+
+.ish-txt-color14 {
+	color: #acde61
+}
+
+.ish-bg-color14 {
+	background-color: #acde61
+}
+
+.ish-txt-color15 {
+	color: #f33131
+}
+
+.ish-bg-color15 {
+	background-color: #f33131
+}
+
+.ish-txt-color16 {
+	color: #4be5c3
+}
+
+.ish-bg-color16 {
+	background-color: #4be5c3
+}
+
+.ish-txt-color17 {
+	color: #d4c873
+}
+
+.ish-bg-color17 {
+	background-color: #d4c873
+}
+
+.ish-txt-color18 {
+	color: #f0be43
+}
+
+.ish-bg-color18 {
+	background-color: #f0be43
+}
+
+.ish-txt-color19 {
+	color: #502b46
+}
+
+.ish-bg-color19 {
+	background-color: #502b46
+}
+
+.ish-txt-color20 {
+	color: #672943
+}
+
+.ish-bg-color20 {
+	background-color: #672943
+}
+
+.ish-txt-color21 {
+	color: #9dbc96
+}
+
+.ish-bg-color21 {
+	background-color: #9dbc96
+}
+
+.ish-txt-color22 {
+	color: #7040ED
+}
+
+.ish-bg-color22 {
+	background-color: #7040ED
+}
+
+.ish-color1 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color1 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color1 dt,
+.ish-sc-toggle.ish-color1 dt,
+.ish-sc-tabs.ish-color1 .ish-active-item,
+.ish-result.ish-color1:before,
+.ish-blog .ish-color1 .ish-underline:before,
+.ish-color1 .ish-underline:before,
+.ish-color1 .site-header .ish-container-fluid,
+.ish-color1 .site-header .ish-decor-container>div,
+.ish-color1 .site-header .ish-container-fluid.ish-bg-color1,
+.ish-color1 .ish-sidebar input,
+.ish-color1 .ish-sidebar button,
+.ish-color1 blockquote:before,
+.ish-color1 blockquote:after,
+.ish-color1 .comment-respond input.submit,
+.ish-color1 .ish-post-navigation a:hover span:before,
+.ish-color1 .ish-blurred-overlay {
+	background-color: #7040ED
+}
+
+.ish-sc-element.ish-txt-color1 a,
+.ish-result.ish-color1 .ish-title a,
+.ish-blog .ish-color1 .ish-blog-post-title a,
+.ish-color1 .ish-sidebar .widget-title,
+.ish-color1 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color1 .comments-title,
+.ish-color1 .comment-reply-title,
+header .site-branding span.ish-txt-color1 {
+	color: #f3d600
+}
+
+.ish-sc-accordion.ish-color1 dt,
+.ish-sc-accordion.ish-color1 dd,
+.ish-sc-toggle.ish-color1 dt,
+.ish-sc-toggle.ish-color1 dd,
+.ish-sc-tabs.ish-color1 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color1 .ish-tabs {
+	border-color: #f3d600
+}
+
+.ish-sc-button:hover.ish-bg-color1,
+.ish-sc-accordion.ish-color1 dt:hover,
+.ish-sc-toggle.ish-color1 dt:hover,
+.ish-sc-tabs.ish-color1 .ish-tabs-menu li:hover,
+.ish-color1 .ish-sidebar button:hover {
+	background-color: #f779a9
+}
+
+.ish-color1 .comment-respond input.submit:hover {
+	background-color: #cc0c54
+}
+
+.ish-txt-color1 a:hover,
+a:hover.ish-txt-color1 {
+	color: #f779a9
+}
+
+.ish-sc-accordion.ish-color1 dt:hover,
+.ish-sc-accordion.ish-color1 dt:hover+dd,
+.ish-sc-toggle.ish-color1 dt:hover,
+.ish-sc-toggle.ish-color1 dt:hover+dd,
+.ish-sc-tabs.ish-color1 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #f779a9
+}
+
+.ish-color2 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color2 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color2 dt,
+.ish-sc-toggle.ish-color2 dt,
+.ish-sc-tabs.ish-color2 .ish-active-item,
+.ish-result.ish-color2:before,
+.ish-blog .ish-color2 .ish-underline:before,
+.ish-color2 .ish-underline:before,
+.ish-color2 .site-header .ish-container-fluid,
+.ish-color2 .site-header .ish-decor-container>div,
+.ish-color2 .site-header .ish-container-fluid.ish-bg-color2,
+.ish-color2 .ish-sidebar input,
+.ish-color2 .ish-sidebar button,
+.ish-color2 blockquote:before,
+.ish-color2 blockquote:after,
+.ish-color2 .comment-respond input.submit,
+.ish-color2 .ish-post-navigation a:hover span:before,
+.ish-color2 .ish-blurred-overlay {
+	background-color: #515151
+}
+
+.ish-sc-element.ish-txt-color2 a,
+.ish-result.ish-color2 .ish-title a,
+.ish-blog .ish-color2 .ish-blog-post-title a,
+.ish-color2 .ish-sidebar .widget-title,
+.ish-color2 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color2 .comments-title,
+.ish-color2 .comment-reply-title,
+header .site-branding span.ish-txt-color2 {
+	color: #515151
+}
+
+.ish-sc-accordion.ish-color2 dt,
+.ish-sc-accordion.ish-color2 dd,
+.ish-sc-toggle.ish-color2 dt,
+.ish-sc-toggle.ish-color2 dd,
+.ish-sc-tabs.ish-color2 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color2 .ish-tabs {
+	border-color: #515151
+}
+
+.ish-sc-button:hover.ish-bg-color2,
+.ish-sc-accordion.ish-color2 dt:hover,
+.ish-sc-toggle.ish-color2 dt:hover,
+.ish-sc-tabs.ish-color2 .ish-tabs-menu li:hover,
+.ish-color2 .ish-sidebar button:hover {
+	background-color: #777
+}
+
+.ish-color2 .comment-respond input.submit:hover {
+	background-color: #2b2b2b
+}
+
+.ish-txt-color2 a:hover,
+a:hover.ish-txt-color2 {
+	color: #777
+}
+
+.ish-sc-accordion.ish-color2 dt:hover,
+.ish-sc-accordion.ish-color2 dt:hover+dd,
+.ish-sc-toggle.ish-color2 dt:hover,
+.ish-sc-toggle.ish-color2 dt:hover+dd,
+.ish-sc-tabs.ish-color2 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #777
+}
+
+.ish-color3 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color3 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color3 dt,
+.ish-sc-toggle.ish-color3 dt,
+.ish-sc-tabs.ish-color3 .ish-active-item,
+.ish-result.ish-color3:before,
+.ish-blog .ish-color3 .ish-underline:before,
+.ish-color3 .ish-underline:before,
+.ish-color3 .site-header .ish-container-fluid,
+.ish-color3 .site-header .ish-decor-container>div,
+.ish-color3 .site-header .ish-container-fluid.ish-bg-color3,
+.ish-color3 .ish-sidebar input,
+.ish-color3 .ish-sidebar button,
+.ish-color3 blockquote:before,
+.ish-color3 blockquote:after,
+.ish-color3 .comment-respond input.submit,
+.ish-color3 .ish-post-navigation a:hover span:before,
+.ish-color3 .ish-blurred-overlay {
+	background-color: #fcfcfc
+}
+
+.ish-sc-element.ish-txt-color3 a,
+.ish-result.ish-color3 .ish-title a,
+.ish-blog .ish-color3 .ish-blog-post-title a,
+.ish-color3 .ish-sidebar .widget-title,
+.ish-color3 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color3 .comments-title,
+.ish-color3 .comment-reply-title,
+header .site-branding span.ish-txt-color3 {
+	color: #fcfcfc
+}
+
+.ish-sc-accordion.ish-color3 dt,
+.ish-sc-accordion.ish-color3 dd,
+.ish-sc-toggle.ish-color3 dt,
+.ish-sc-toggle.ish-color3 dd,
+.ish-sc-tabs.ish-color3 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color3 .ish-tabs {
+	border-color: #fcfcfc
+}
+
+.ish-sc-button:hover.ish-bg-color3,
+.ish-sc-accordion.ish-color3 dt:hover,
+.ish-sc-toggle.ish-color3 dt:hover,
+.ish-sc-tabs.ish-color3 .ish-tabs-menu li:hover,
+.ish-color3 .ish-sidebar button:hover {
+	background-color: #fff
+}
+
+.ish-color3 .comment-respond input.submit:hover {
+	background-color: #d6d6d6
+}
+
+.ish-txt-color3 a:hover,
+a:hover.ish-txt-color3 {
+	color: #fff
+}
+
+.ish-sc-accordion.ish-color3 dt:hover,
+.ish-sc-accordion.ish-color3 dt:hover+dd,
+.ish-sc-toggle.ish-color3 dt:hover,
+.ish-sc-toggle.ish-color3 dt:hover+dd,
+.ish-sc-tabs.ish-color3 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #fff
+}
+
+.ish-color4 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color4 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color4 dt,
+.ish-sc-toggle.ish-color4 dt,
+.ish-sc-tabs.ish-color4 .ish-active-item,
+.ish-result.ish-color4:before,
+.ish-blog .ish-color4 .ish-underline:before,
+.ish-color4 .ish-underline:before,
+.ish-color4 .site-header .ish-container-fluid,
+.ish-color4 .site-header .ish-decor-container>div,
+.ish-color4 .site-header .ish-container-fluid.ish-bg-color4,
+.ish-color4 .ish-sidebar input,
+.ish-color4 .ish-sidebar button,
+.ish-color4 blockquote:before,
+.ish-color4 blockquote:after,
+.ish-color4 .comment-respond input.submit,
+.ish-color4 .ish-post-navigation a:hover span:before,
+.ish-color4 .ish-blurred-overlay {
+	background-color: #fff
+}
+
+.ish-sc-element.ish-txt-color4 a,
+.ish-result.ish-color4 .ish-title a,
+.ish-blog .ish-color4 .ish-blog-post-title a,
+.ish-color4 .ish-sidebar .widget-title,
+.ish-color4 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color4 .comments-title,
+.ish-color4 .comment-reply-title,
+header .site-branding span.ish-txt-color4 {
+	color: #fff
+}
+
+.ish-sc-accordion.ish-color4 dt,
+.ish-sc-accordion.ish-color4 dd,
+.ish-sc-toggle.ish-color4 dt,
+.ish-sc-toggle.ish-color4 dd,
+.ish-sc-tabs.ish-color4 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color4 .ish-tabs {
+	border-color: #fff
+}
+
+.ish-sc-button:hover.ish-bg-color4,
+.ish-sc-accordion.ish-color4 dt:hover,
+.ish-sc-toggle.ish-color4 dt:hover,
+.ish-sc-tabs.ish-color4 .ish-tabs-menu li:hover,
+.ish-color4 .ish-sidebar button:hover {
+	background-color: #fff
+}
+
+.ish-color4 .comment-respond input.submit:hover {
+	background-color: #d9d9d9
+}
+
+.ish-txt-color4 a:hover,
+a:hover.ish-txt-color4 {
+	color: #fff
+}
+
+.ish-sc-accordion.ish-color4 dt:hover,
+.ish-sc-accordion.ish-color4 dt:hover+dd,
+.ish-sc-toggle.ish-color4 dt:hover,
+.ish-sc-toggle.ish-color4 dt:hover+dd,
+.ish-sc-tabs.ish-color4 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #fff
+}
+
+.ish-color5 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color5 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color5 dt,
+.ish-sc-toggle.ish-color5 dt,
+.ish-sc-tabs.ish-color5 .ish-active-item,
+.ish-result.ish-color5:before,
+.ish-blog .ish-color5 .ish-underline:before,
+.ish-color5 .ish-underline:before,
+.ish-color5 .site-header .ish-container-fluid,
+.ish-color5 .site-header .ish-decor-container>div,
+.ish-color5 .site-header .ish-container-fluid.ish-bg-color5,
+.ish-color5 .ish-sidebar input,
+.ish-color5 .ish-sidebar button,
+.ish-color5 blockquote:before,
+.ish-color5 blockquote:after,
+.ish-color5 .comment-respond input.submit,
+.ish-color5 .ish-post-navigation a:hover span:before,
+.ish-color5 .ish-blurred-overlay {
+	background-color: #7cd3ce
+}
+
+.ish-sc-element.ish-txt-color5 a,
+.ish-result.ish-color5 .ish-title a,
+.ish-blog .ish-color5 .ish-blog-post-title a,
+.ish-color5 .ish-sidebar .widget-title,
+.ish-color5 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color5 .comments-title,
+.ish-color5 .comment-reply-title,
+header .site-branding span.ish-txt-color5 {
+	color: #7cd3ce
+}
+
+.ish-sc-accordion.ish-color5 dt,
+.ish-sc-accordion.ish-color5 dd,
+.ish-sc-toggle.ish-color5 dt,
+.ish-sc-toggle.ish-color5 dd,
+.ish-sc-tabs.ish-color5 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color5 .ish-tabs {
+	border-color: #7cd3ce
+}
+
+.ish-sc-button:hover.ish-bg-color5,
+.ish-sc-accordion.ish-color5 dt:hover,
+.ish-sc-toggle.ish-color5 dt:hover,
+.ish-sc-tabs.ish-color5 .ish-tabs-menu li:hover,
+.ish-color5 .ish-sidebar button:hover {
+	background-color: #b5e6e3
+}
+
+.ish-color5 .comment-respond input.submit:hover {
+	background-color: #43c0b9
+}
+
+.ish-txt-color5 a:hover,
+a:hover.ish-txt-color5 {
+	color: #b5e6e3
+}
+
+.ish-sc-accordion.ish-color5 dt:hover,
+.ish-sc-accordion.ish-color5 dt:hover+dd,
+.ish-sc-toggle.ish-color5 dt:hover,
+.ish-sc-toggle.ish-color5 dt:hover+dd,
+.ish-sc-tabs.ish-color5 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #b5e6e3
+}
+
+.ish-color6 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color6 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color6 dt,
+.ish-sc-toggle.ish-color6 dt,
+.ish-sc-tabs.ish-color6 .ish-active-item,
+.ish-result.ish-color6:before,
+.ish-blog .ish-color6 .ish-underline:before,
+.ish-color6 .ish-underline:before,
+.ish-color6 .site-header .ish-container-fluid,
+.ish-color6 .site-header .ish-decor-container>div,
+.ish-color6 .site-header .ish-container-fluid.ish-bg-color6,
+.ish-color6 .ish-sidebar input,
+.ish-color6 .ish-sidebar button,
+.ish-color6 blockquote:before,
+.ish-color6 blockquote:after,
+.ish-color6 .comment-respond input.submit,
+.ish-color6 .ish-post-navigation a:hover span:before,
+.ish-color6 .ish-blurred-overlay {
+	background-color: #1cbbe3
+}
+
+.ish-sc-element.ish-txt-color6 a,
+.ish-result.ish-color6 .ish-title a,
+.ish-blog .ish-color6 .ish-blog-post-title a,
+.ish-color6 .ish-sidebar .widget-title,
+.ish-color6 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color6 .comments-title,
+.ish-color6 .comment-reply-title,
+header .site-branding span.ish-txt-color6 {
+	color: #1cbbe3
+}
+
+.ish-sc-accordion.ish-color6 dt,
+.ish-sc-accordion.ish-color6 dd,
+.ish-sc-toggle.ish-color6 dt,
+.ish-sc-toggle.ish-color6 dd,
+.ish-sc-tabs.ish-color6 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color6 .ish-tabs {
+	border-color: #1cbbe3
+}
+
+.ish-sc-button:hover.ish-bg-color6,
+.ish-sc-accordion.ish-color6 dt:hover,
+.ish-sc-toggle.ish-color6 dt:hover,
+.ish-sc-tabs.ish-color6 .ish-tabs-menu li:hover,
+.ish-color6 .ish-sidebar button:hover {
+	background-color: #60cfeb
+}
+
+.ish-color6 .comment-respond input.submit:hover {
+	background-color: #14839f
+}
+
+.ish-txt-color6 a:hover,
+a:hover.ish-txt-color6 {
+	color: #60cfeb
+}
+
+.ish-sc-accordion.ish-color6 dt:hover,
+.ish-sc-accordion.ish-color6 dt:hover+dd,
+.ish-sc-toggle.ish-color6 dt:hover,
+.ish-sc-toggle.ish-color6 dt:hover+dd,
+.ish-sc-tabs.ish-color6 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #60cfeb
+}
+
+.ish-color7 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color7 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color7 dt,
+.ish-sc-toggle.ish-color7 dt,
+.ish-sc-tabs.ish-color7 .ish-active-item,
+.ish-result.ish-color7:before,
+.ish-blog .ish-color7 .ish-underline:before,
+.ish-color7 .ish-underline:before,
+.ish-color7 .site-header .ish-container-fluid,
+.ish-color7 .site-header .ish-decor-container>div,
+.ish-color7 .site-header .ish-container-fluid.ish-bg-color7,
+.ish-color7 .ish-sidebar input,
+.ish-color7 .ish-sidebar button,
+.ish-color7 blockquote:before,
+.ish-color7 blockquote:after,
+.ish-color7 .comment-respond input.submit,
+.ish-color7 .ish-post-navigation a:hover span:before,
+.ish-color7 .ish-blurred-overlay {
+	background-color: #c2bcb5
+}
+
+.ish-sc-element.ish-txt-color7 a,
+.ish-result.ish-color7 .ish-title a,
+.ish-blog .ish-color7 .ish-blog-post-title a,
+.ish-color7 .ish-sidebar .widget-title,
+.ish-color7 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color7 .comments-title,
+.ish-color7 .comment-reply-title,
+header .site-branding span.ish-txt-color7 {
+	color: #c2bcb5
+}
+
+.ish-sc-accordion.ish-color7 dt,
+.ish-sc-accordion.ish-color7 dd,
+.ish-sc-toggle.ish-color7 dt,
+.ish-sc-toggle.ish-color7 dd,
+.ish-sc-tabs.ish-color7 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color7 .ish-tabs {
+	border-color: #c2bcb5
+}
+
+.ish-sc-button:hover.ish-bg-color7,
+.ish-sc-accordion.ish-color7 dt:hover,
+.ish-sc-toggle.ish-color7 dt:hover,
+.ish-sc-tabs.ish-color7 .ish-tabs-menu li:hover,
+.ish-color7 .ish-sidebar button:hover {
+	background-color: #e5e2df
+}
+
+.ish-color7 .comment-respond input.submit:hover {
+	background-color: #9f968b
+}
+
+.ish-txt-color7 a:hover,
+a:hover.ish-txt-color7 {
+	color: #e5e2df
+}
+
+.ish-sc-accordion.ish-color7 dt:hover,
+.ish-sc-accordion.ish-color7 dt:hover+dd,
+.ish-sc-toggle.ish-color7 dt:hover,
+.ish-sc-toggle.ish-color7 dt:hover+dd,
+.ish-sc-tabs.ish-color7 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #e5e2df
+}
+
+.ish-color8 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color8 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color8 dt,
+.ish-sc-toggle.ish-color8 dt,
+.ish-sc-tabs.ish-color8 .ish-active-item,
+.ish-result.ish-color8:before,
+.ish-blog .ish-color8 .ish-underline:before,
+.ish-color8 .ish-underline:before,
+.ish-color8 .site-header .ish-container-fluid,
+.ish-color8 .site-header .ish-decor-container>div,
+.ish-color8 .site-header .ish-container-fluid.ish-bg-color8,
+.ish-color8 .ish-sidebar input,
+.ish-color8 .ish-sidebar button,
+.ish-color8 blockquote:before,
+.ish-color8 blockquote:after,
+.ish-color8 .comment-respond input.submit,
+.ish-color8 .ish-post-navigation a:hover span:before,
+.ish-color8 .ish-blurred-overlay {
+	background-color: #5dc4be
+}
+
+.ish-sc-element.ish-txt-color8 a,
+.ish-result.ish-color8 .ish-title a,
+.ish-blog .ish-color8 .ish-blog-post-title a,
+.ish-color8 .ish-sidebar .widget-title,
+.ish-color8 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color8 .comments-title,
+.ish-color8 .comment-reply-title,
+header .site-branding span.ish-txt-color8 {
+	color: #5dc4be
+}
+
+.ish-sc-accordion.ish-color8 dt,
+.ish-sc-accordion.ish-color8 dd,
+.ish-sc-toggle.ish-color8 dt,
+.ish-sc-toggle.ish-color8 dd,
+.ish-sc-tabs.ish-color8 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color8 .ish-tabs {
+	border-color: #5dc4be
+}
+
+.ish-sc-button:hover.ish-bg-color8,
+.ish-sc-accordion.ish-color8 dt:hover,
+.ish-sc-toggle.ish-color8 dt:hover,
+.ish-sc-tabs.ish-color8 .ish-tabs-menu li:hover,
+.ish-color8 .ish-sidebar button:hover {
+	background-color: #95d8d5
+}
+
+.ish-color8 .comment-respond input.submit:hover {
+	background-color: #399c96
+}
+
+.ish-txt-color8 a:hover,
+a:hover.ish-txt-color8 {
+	color: #95d8d5
+}
+
+.ish-sc-accordion.ish-color8 dt:hover,
+.ish-sc-accordion.ish-color8 dt:hover+dd,
+.ish-sc-toggle.ish-color8 dt:hover,
+.ish-sc-toggle.ish-color8 dt:hover+dd,
+.ish-sc-tabs.ish-color8 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #95d8d5
+}
+
+.ish-color9 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color9 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color9 dt,
+.ish-sc-toggle.ish-color9 dt,
+.ish-sc-tabs.ish-color9 .ish-active-item,
+.ish-result.ish-color9:before,
+.ish-blog .ish-color9 .ish-underline:before,
+.ish-color9 .ish-underline:before,
+.ish-color9 .site-header .ish-container-fluid,
+.ish-color9 .site-header .ish-decor-container>div,
+.ish-color9 .site-header .ish-container-fluid.ish-bg-color9,
+.ish-color9 .ish-sidebar input,
+.ish-color9 .ish-sidebar button,
+.ish-color9 blockquote:before,
+.ish-color9 blockquote:after,
+.ish-color9 .comment-respond input.submit,
+.ish-color9 .ish-post-navigation a:hover span:before,
+.ish-color9 .ish-blurred-overlay {
+	background-color: #dd613b
+}
+
+.ish-sc-element.ish-txt-color9 a,
+.ish-result.ish-color9 .ish-title a,
+.ish-blog .ish-color9 .ish-blog-post-title a,
+.ish-color9 .ish-sidebar .widget-title,
+.ish-color9 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color9 .comments-title,
+.ish-color9 .comment-reply-title,
+header .site-branding span.ish-txt-color9 {
+	color: #dd613b
+}
+
+.ish-sc-accordion.ish-color9 dt,
+.ish-sc-accordion.ish-color9 dd,
+.ish-sc-toggle.ish-color9 dt,
+.ish-sc-toggle.ish-color9 dd,
+.ish-sc-tabs.ish-color9 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color9 .ish-tabs {
+	border-color: #dd613b
+}
+
+.ish-sc-button:hover.ish-bg-color9,
+.ish-sc-accordion.ish-color9 dt:hover,
+.ish-sc-toggle.ish-color9 dt:hover,
+.ish-sc-tabs.ish-color9 .ish-tabs-menu li:hover,
+.ish-color9 .ish-sidebar button:hover {
+	background-color: #e8967c
+}
+
+.ish-color9 .comment-respond input.submit:hover {
+	background-color: #ad401e
+}
+
+.ish-txt-color9 a:hover,
+a:hover.ish-txt-color9 {
+	color: #e8967c
+}
+
+.ish-sc-accordion.ish-color9 dt:hover,
+.ish-sc-accordion.ish-color9 dt:hover+dd,
+.ish-sc-toggle.ish-color9 dt:hover,
+.ish-sc-toggle.ish-color9 dt:hover+dd,
+.ish-sc-tabs.ish-color9 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #e8967c
+}
+
+.ish-color10 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color10 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color10 dt,
+.ish-sc-toggle.ish-color10 dt,
+.ish-sc-tabs.ish-color10 .ish-active-item,
+.ish-result.ish-color10:before,
+.ish-blog .ish-color10 .ish-underline:before,
+.ish-color10 .ish-underline:before,
+.ish-color10 .site-header .ish-container-fluid,
+.ish-color10 .site-header .ish-decor-container>div,
+.ish-color10 .site-header .ish-container-fluid.ish-bg-color10,
+.ish-color10 .ish-sidebar input,
+.ish-color10 .ish-sidebar button,
+.ish-color10 blockquote:before,
+.ish-color10 blockquote:after,
+.ish-color10 .comment-respond input.submit,
+.ish-color10 .ish-post-navigation a:hover span:before,
+.ish-color10 .ish-blurred-overlay {
+	background-color: #a1744f
+}
+
+.ish-sc-element.ish-txt-color10 a,
+.ish-result.ish-color10 .ish-title a,
+.ish-blog .ish-color10 .ish-blog-post-title a,
+.ish-color10 .ish-sidebar .widget-title,
+.ish-color10 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color10 .comments-title,
+.ish-color10 .comment-reply-title,
+header .site-branding span.ish-txt-color10 {
+	color: #a1744f
+}
+
+.ish-sc-accordion.ish-color10 dt,
+.ish-sc-accordion.ish-color10 dd,
+.ish-sc-toggle.ish-color10 dt,
+.ish-sc-toggle.ish-color10 dd,
+.ish-sc-tabs.ish-color10 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color10 .ish-tabs {
+	border-color: #a1744f
+}
+
+.ish-sc-button:hover.ish-bg-color10,
+.ish-sc-accordion.ish-color10 dt:hover,
+.ish-sc-toggle.ish-color10 dt:hover,
+.ish-sc-tabs.ish-color10 .ish-tabs-menu li:hover,
+.ish-color10 .ish-sidebar button:hover {
+	background-color: #bf9b7d
+}
+
+.ish-color10 .comment-respond input.submit:hover {
+	background-color: #6e4f36
+}
+
+.ish-txt-color10 a:hover,
+a:hover.ish-txt-color10 {
+	color: #bf9b7d
+}
+
+.ish-sc-accordion.ish-color10 dt:hover,
+.ish-sc-accordion.ish-color10 dt:hover+dd,
+.ish-sc-toggle.ish-color10 dt:hover,
+.ish-sc-toggle.ish-color10 dt:hover+dd,
+.ish-sc-tabs.ish-color10 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #bf9b7d
+}
+
+.ish-color11 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color11 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color11 dt,
+.ish-sc-toggle.ish-color11 dt,
+.ish-sc-tabs.ish-color11 .ish-active-item,
+.ish-result.ish-color11:before,
+.ish-blog .ish-color11 .ish-underline:before,
+.ish-color11 .ish-underline:before,
+.ish-color11 .site-header .ish-container-fluid,
+.ish-color11 .site-header .ish-decor-container>div,
+.ish-color11 .site-header .ish-container-fluid.ish-bg-color11,
+.ish-color11 .ish-sidebar input,
+.ish-color11 .ish-sidebar button,
+.ish-color11 blockquote:before,
+.ish-color11 blockquote:after,
+.ish-color11 .comment-respond input.submit,
+.ish-color11 .ish-post-navigation a:hover span:before,
+.ish-color11 .ish-blurred-overlay {
+	background-color: #37bdb6
+}
+
+.ish-sc-element.ish-txt-color11 a,
+.ish-result.ish-color11 .ish-title a,
+.ish-blog .ish-color11 .ish-blog-post-title a,
+.ish-color11 .ish-sidebar .widget-title,
+.ish-color11 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color11 .comments-title,
+.ish-color11 .comment-reply-title,
+header .site-branding span.ish-txt-color11 {
+	color: #37bdb6
+}
+
+.ish-sc-accordion.ish-color11 dt,
+.ish-sc-accordion.ish-color11 dd,
+.ish-sc-toggle.ish-color11 dt,
+.ish-sc-toggle.ish-color11 dd,
+.ish-sc-tabs.ish-color11 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color11 .ish-tabs {
+	border-color: #37bdb6
+}
+
+.ish-sc-button:hover.ish-bg-color11,
+.ish-sc-accordion.ish-color11 dt:hover,
+.ish-sc-toggle.ish-color11 dt:hover,
+.ish-sc-tabs.ish-color11 .ish-tabs-menu li:hover,
+.ish-color11 .ish-sidebar button:hover {
+	background-color: #6cd4cf
+}
+
+.ish-color11 .comment-respond input.submit:hover {
+	background-color: #26827d
+}
+
+.ish-txt-color11 a:hover,
+a:hover.ish-txt-color11 {
+	color: #6cd4cf
+}
+
+.ish-sc-accordion.ish-color11 dt:hover,
+.ish-sc-accordion.ish-color11 dt:hover+dd,
+.ish-sc-toggle.ish-color11 dt:hover,
+.ish-sc-toggle.ish-color11 dt:hover+dd,
+.ish-sc-tabs.ish-color11 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #6cd4cf
+}
+
+.ish-color12 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color12 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color12 dt,
+.ish-sc-toggle.ish-color12 dt,
+.ish-sc-tabs.ish-color12 .ish-active-item,
+.ish-result.ish-color12:before,
+.ish-blog .ish-color12 .ish-underline:before,
+.ish-color12 .ish-underline:before,
+.ish-color12 .site-header .ish-container-fluid,
+.ish-color12 .site-header .ish-decor-container>div,
+.ish-color12 .site-header .ish-container-fluid.ish-bg-color12,
+.ish-color12 .ish-sidebar input,
+.ish-color12 .ish-sidebar button,
+.ish-color12 blockquote:before,
+.ish-color12 blockquote:after,
+.ish-color12 .comment-respond input.submit,
+.ish-color12 .ish-post-navigation a:hover span:before,
+.ish-color12 .ish-blurred-overlay {
+	background-color: #bda949
+}
+
+.ish-sc-element.ish-txt-color12 a,
+.ish-result.ish-color12 .ish-title a,
+.ish-blog .ish-color12 .ish-blog-post-title a,
+.ish-color12 .ish-sidebar .widget-title,
+.ish-color12 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color12 .comments-title,
+.ish-color12 .comment-reply-title,
+header .site-branding span.ish-txt-color12 {
+	color: #bda949
+}
+
+.ish-sc-accordion.ish-color12 dt,
+.ish-sc-accordion.ish-color12 dd,
+.ish-sc-toggle.ish-color12 dt,
+.ish-sc-toggle.ish-color12 dd,
+.ish-sc-tabs.ish-color12 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color12 .ish-tabs {
+	border-color: #bda949
+}
+
+.ish-sc-button:hover.ish-bg-color12,
+.ish-sc-accordion.ish-color12 dt:hover,
+.ish-sc-toggle.ish-color12 dt:hover,
+.ish-sc-tabs.ish-color12 .ish-tabs-menu li:hover,
+.ish-color12 .ish-sidebar button:hover {
+	background-color: #d1c481
+}
+
+.ish-color12 .comment-respond input.submit:hover {
+	background-color: #887931
+}
+
+.ish-txt-color12 a:hover,
+a:hover.ish-txt-color12 {
+	color: #d1c481
+}
+
+.ish-sc-accordion.ish-color12 dt:hover,
+.ish-sc-accordion.ish-color12 dt:hover+dd,
+.ish-sc-toggle.ish-color12 dt:hover,
+.ish-sc-toggle.ish-color12 dt:hover+dd,
+.ish-sc-tabs.ish-color12 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #d1c481
+}
+
+.ish-color13 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color13 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color13 dt,
+.ish-sc-toggle.ish-color13 dt,
+.ish-sc-tabs.ish-color13 .ish-active-item,
+.ish-result.ish-color13:before,
+.ish-blog .ish-color13 .ish-underline:before,
+.ish-color13 .ish-underline:before,
+.ish-color13 .site-header .ish-container-fluid,
+.ish-color13 .site-header .ish-decor-container>div,
+.ish-color13 .site-header .ish-container-fluid.ish-bg-color13,
+.ish-color13 .ish-sidebar input,
+.ish-color13 .ish-sidebar button,
+.ish-color13 blockquote:before,
+.ish-color13 blockquote:after,
+.ish-color13 .comment-respond input.submit,
+.ish-color13 .ish-post-navigation a:hover span:before,
+.ish-color13 .ish-blurred-overlay {
+	background-color: #f3d600
+}
+
+.ish-sc-element.ish-txt-color13 a,
+.ish-result.ish-color13 .ish-title a,
+.ish-blog .ish-color13 .ish-blog-post-title a,
+.ish-color13 .ish-sidebar .widget-title,
+.ish-color13 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color13 .comments-title,
+.ish-color13 .comment-reply-title,
+header .site-branding span.ish-txt-color13 {
+	color: #f3d600
+}
+
+.ish-sc-accordion.ish-color13 dt,
+.ish-sc-accordion.ish-color13 dd,
+.ish-sc-toggle.ish-color13 dt,
+.ish-sc-toggle.ish-color13 dd,
+.ish-sc-tabs.ish-color13 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color13 .ish-tabs {
+	border-color: #f3d600
+}
+
+.ish-sc-button:hover.ish-bg-color13,
+.ish-sc-accordion.ish-color13 dt:hover,
+.ish-sc-toggle.ish-color13 dt:hover,
+.ish-sc-tabs.ish-color13 .ish-tabs-menu li:hover,
+.ish-color13 .ish-sidebar button:hover {
+	background-color: #ffe841
+}
+
+.ish-color13 .comment-respond input.submit:hover {
+	background-color: #a79300
+}
+
+.ish-txt-color13 a:hover,
+a:hover.ish-txt-color13 {
+	color: #ffe841
+}
+
+.ish-sc-accordion.ish-color13 dt:hover,
+.ish-sc-accordion.ish-color13 dt:hover+dd,
+.ish-sc-toggle.ish-color13 dt:hover,
+.ish-sc-toggle.ish-color13 dt:hover+dd,
+.ish-sc-tabs.ish-color13 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #ffe841
+}
+
+.ish-color14 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color14 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color14 dt,
+.ish-sc-toggle.ish-color14 dt,
+.ish-sc-tabs.ish-color14 .ish-active-item,
+.ish-result.ish-color14:before,
+.ish-blog .ish-color14 .ish-underline:before,
+.ish-color14 .ish-underline:before,
+.ish-color14 .site-header .ish-container-fluid,
+.ish-color14 .site-header .ish-decor-container>div,
+.ish-color14 .site-header .ish-container-fluid.ish-bg-color14,
+.ish-color14 .ish-sidebar input,
+.ish-color14 .ish-sidebar button,
+.ish-color14 blockquote:before,
+.ish-color14 blockquote:after,
+.ish-color14 .comment-respond input.submit,
+.ish-color14 .ish-post-navigation a:hover span:before,
+.ish-color14 .ish-blurred-overlay {
+	background-color: #acde61
+}
+
+.ish-sc-element.ish-txt-color14 a,
+.ish-result.ish-color14 .ish-title a,
+.ish-blog .ish-color14 .ish-blog-post-title a,
+.ish-color14 .ish-sidebar .widget-title,
+.ish-color14 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color14 .comments-title,
+.ish-color14 .comment-reply-title,
+header .site-branding span.ish-txt-color14 {
+	color: #acde61
+}
+
+.ish-sc-accordion.ish-color14 dt,
+.ish-sc-accordion.ish-color14 dd,
+.ish-sc-toggle.ish-color14 dt,
+.ish-sc-toggle.ish-color14 dd,
+.ish-sc-tabs.ish-color14 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color14 .ish-tabs {
+	border-color: #acde61
+}
+
+.ish-sc-button:hover.ish-bg-color14,
+.ish-sc-accordion.ish-color14 dt:hover,
+.ish-sc-toggle.ish-color14 dt:hover,
+.ish-sc-tabs.ish-color14 .ish-tabs-menu li:hover,
+.ish-color14 .ish-sidebar button:hover {
+	background-color: #cdeba0
+}
+
+.ish-color14 .comment-respond input.submit:hover {
+	background-color: #89c92a
+}
+
+.ish-txt-color14 a:hover,
+a:hover.ish-txt-color14 {
+	color: #cdeba0
+}
+
+.ish-sc-accordion.ish-color14 dt:hover,
+.ish-sc-accordion.ish-color14 dt:hover+dd,
+.ish-sc-toggle.ish-color14 dt:hover,
+.ish-sc-toggle.ish-color14 dt:hover+dd,
+.ish-sc-tabs.ish-color14 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #cdeba0
+}
+
+.ish-color15 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color15 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color15 dt,
+.ish-sc-toggle.ish-color15 dt,
+.ish-sc-tabs.ish-color15 .ish-active-item,
+.ish-result.ish-color15:before,
+.ish-blog .ish-color15 .ish-underline:before,
+.ish-color15 .ish-underline:before,
+.ish-color15 .site-header .ish-container-fluid,
+.ish-color15 .site-header .ish-decor-container>div,
+.ish-color15 .site-header .ish-container-fluid.ish-bg-color15,
+.ish-color15 .ish-sidebar input,
+.ish-color15 .ish-sidebar button,
+.ish-color15 blockquote:before,
+.ish-color15 blockquote:after,
+.ish-color15 .comment-respond input.submit,
+.ish-color15 .ish-post-navigation a:hover span:before,
+.ish-color15 .ish-blurred-overlay {
+	background-color: #f33131
+}
+
+.ish-sc-element.ish-txt-color15 a,
+.ish-result.ish-color15 .ish-title a,
+.ish-blog .ish-color15 .ish-blog-post-title a,
+.ish-color15 .ish-sidebar .widget-title,
+.ish-color15 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color15 .comments-title,
+.ish-color15 .comment-reply-title,
+header .site-branding span.ish-txt-color15 {
+	color: #f33131
+}
+
+.ish-sc-accordion.ish-color15 dt,
+.ish-sc-accordion.ish-color15 dd,
+.ish-sc-toggle.ish-color15 dt,
+.ish-sc-toggle.ish-color15 dd,
+.ish-sc-tabs.ish-color15 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color15 .ish-tabs {
+	border-color: #f33131
+}
+
+.ish-sc-button:hover.ish-bg-color15,
+.ish-sc-accordion.ish-color15 dt:hover,
+.ish-sc-toggle.ish-color15 dt:hover,
+.ish-sc-tabs.ish-color15 .ish-tabs-menu li:hover,
+.ish-color15 .ish-sidebar button:hover {
+	background-color: #f77979
+}
+
+.ish-color15 .comment-respond input.submit:hover {
+	background-color: #cc0c0c
+}
+
+.ish-txt-color15 a:hover,
+a:hover.ish-txt-color15 {
+	color: #f77979
+}
+
+.ish-sc-accordion.ish-color15 dt:hover,
+.ish-sc-accordion.ish-color15 dt:hover+dd,
+.ish-sc-toggle.ish-color15 dt:hover,
+.ish-sc-toggle.ish-color15 dt:hover+dd,
+.ish-sc-tabs.ish-color15 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #f77979
+}
+
+.ish-color16 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color16 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color16 dt,
+.ish-sc-toggle.ish-color16 dt,
+.ish-sc-tabs.ish-color16 .ish-active-item,
+.ish-result.ish-color16:before,
+.ish-blog .ish-color16 .ish-underline:before,
+.ish-color16 .ish-underline:before,
+.ish-color16 .site-header .ish-container-fluid,
+.ish-color16 .site-header .ish-decor-container>div,
+.ish-color16 .site-header .ish-container-fluid.ish-bg-color16,
+.ish-color16 .ish-sidebar input,
+.ish-color16 .ish-sidebar button,
+.ish-color16 blockquote:before,
+.ish-color16 blockquote:after,
+.ish-color16 .comment-respond input.submit,
+.ish-color16 .ish-post-navigation a:hover span:before,
+.ish-color16 .ish-blurred-overlay {
+	background-color: #4be5c3
+}
+
+.ish-sc-element.ish-txt-color16 a,
+.ish-result.ish-color16 .ish-title a,
+.ish-blog .ish-color16 .ish-blog-post-title a,
+.ish-color16 .ish-sidebar .widget-title,
+.ish-color16 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color16 .comments-title,
+.ish-color16 .comment-reply-title,
+header .site-branding span.ish-txt-color16 {
+	color: #4be5c3
+}
+
+.ish-sc-accordion.ish-color16 dt,
+.ish-sc-accordion.ish-color16 dd,
+.ish-sc-toggle.ish-color16 dt,
+.ish-sc-toggle.ish-color16 dd,
+.ish-sc-tabs.ish-color16 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color16 .ish-tabs {
+	border-color: #4be5c3
+}
+
+.ish-sc-button:hover.ish-bg-color16,
+.ish-sc-accordion.ish-color16 dt:hover,
+.ish-sc-toggle.ish-color16 dt:hover,
+.ish-sc-tabs.ish-color16 .ish-tabs-menu li:hover,
+.ish-color16 .ish-sidebar button:hover {
+	background-color: #8eefd9
+}
+
+.ish-color16 .comment-respond input.submit:hover {
+	background-color: #1dc7a1
+}
+
+.ish-txt-color16 a:hover,
+a:hover.ish-txt-color16 {
+	color: #8eefd9
+}
+
+.ish-sc-accordion.ish-color16 dt:hover,
+.ish-sc-accordion.ish-color16 dt:hover+dd,
+.ish-sc-toggle.ish-color16 dt:hover,
+.ish-sc-toggle.ish-color16 dt:hover+dd,
+.ish-sc-tabs.ish-color16 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #8eefd9
+}
+
+.ish-color17 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color17 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color17 dt,
+.ish-sc-toggle.ish-color17 dt,
+.ish-sc-tabs.ish-color17 .ish-active-item,
+.ish-result.ish-color17:before,
+.ish-blog .ish-color17 .ish-underline:before,
+.ish-color17 .ish-underline:before,
+.ish-color17 .site-header .ish-container-fluid,
+.ish-color17 .site-header .ish-decor-container>div,
+.ish-color17 .site-header .ish-container-fluid.ish-bg-color17,
+.ish-color17 .ish-sidebar input,
+.ish-color17 .ish-sidebar button,
+.ish-color17 blockquote:before,
+.ish-color17 blockquote:after,
+.ish-color17 .comment-respond input.submit,
+.ish-color17 .ish-post-navigation a:hover span:before,
+.ish-color17 .ish-blurred-overlay {
+	background-color: #d4c873
+}
+
+.ish-sc-element.ish-txt-color17 a,
+.ish-result.ish-color17 .ish-title a,
+.ish-blog .ish-color17 .ish-blog-post-title a,
+.ish-color17 .ish-sidebar .widget-title,
+.ish-color17 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color17 .comments-title,
+.ish-color17 .comment-reply-title,
+header .site-branding span.ish-txt-color17 {
+	color: #d4c873
+}
+
+.ish-sc-accordion.ish-color17 dt,
+.ish-sc-accordion.ish-color17 dd,
+.ish-sc-toggle.ish-color17 dt,
+.ish-sc-toggle.ish-color17 dd,
+.ish-sc-tabs.ish-color17 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color17 .ish-tabs {
+	border-color: #d4c873
+}
+
+.ish-sc-button:hover.ish-bg-color17,
+.ish-sc-accordion.ish-color17 dt:hover,
+.ish-sc-toggle.ish-color17 dt:hover,
+.ish-sc-tabs.ish-color17 .ish-tabs-menu li:hover,
+.ish-color17 .ish-sidebar button:hover {
+	background-color: #e6dfae
+}
+
+.ish-color17 .comment-respond input.submit:hover {
+	background-color: #c0af3b
+}
+
+.ish-txt-color17 a:hover,
+a:hover.ish-txt-color17 {
+	color: #e6dfae
+}
+
+.ish-sc-accordion.ish-color17 dt:hover,
+.ish-sc-accordion.ish-color17 dt:hover+dd,
+.ish-sc-toggle.ish-color17 dt:hover,
+.ish-sc-toggle.ish-color17 dt:hover+dd,
+.ish-sc-tabs.ish-color17 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #e6dfae
+}
+
+.ish-color18 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color18 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color18 dt,
+.ish-sc-toggle.ish-color18 dt,
+.ish-sc-tabs.ish-color18 .ish-active-item,
+.ish-result.ish-color18:before,
+.ish-blog .ish-color18 .ish-underline:before,
+.ish-color18 .ish-underline:before,
+.ish-color18 .site-header .ish-container-fluid,
+.ish-color18 .site-header .ish-decor-container>div,
+.ish-color18 .site-header .ish-container-fluid.ish-bg-color18,
+.ish-color18 .ish-sidebar input,
+.ish-color18 .ish-sidebar button,
+.ish-color18 blockquote:before,
+.ish-color18 blockquote:after,
+.ish-color18 .comment-respond input.submit,
+.ish-color18 .ish-post-navigation a:hover span:before,
+.ish-color18 .ish-blurred-overlay {
+	background-color: #f0be43
+}
+
+.ish-sc-element.ish-txt-color18 a,
+.ish-result.ish-color18 .ish-title a,
+.ish-blog .ish-color18 .ish-blog-post-title a,
+.ish-color18 .ish-sidebar .widget-title,
+.ish-color18 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color18 .comments-title,
+.ish-color18 .comment-reply-title,
+header .site-branding span.ish-txt-color18 {
+	color: #f0be43
+}
+
+.ish-sc-accordion.ish-color18 dt,
+.ish-sc-accordion.ish-color18 dd,
+.ish-sc-toggle.ish-color18 dt,
+.ish-sc-toggle.ish-color18 dd,
+.ish-sc-tabs.ish-color18 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color18 .ish-tabs {
+	border-color: #f0be43
+}
+
+.ish-sc-button:hover.ish-bg-color18,
+.ish-sc-accordion.ish-color18 dt:hover,
+.ish-sc-toggle.ish-color18 dt:hover,
+.ish-sc-tabs.ish-color18 .ish-tabs-menu li:hover,
+.ish-color18 .ish-sidebar button:hover {
+	background-color: #f6d68a
+}
+
+.ish-color18 .comment-respond input.submit:hover {
+	background-color: #d59d11
+}
+
+.ish-txt-color18 a:hover,
+a:hover.ish-txt-color18 {
+	color: #f6d68a
+}
+
+.ish-sc-accordion.ish-color18 dt:hover,
+.ish-sc-accordion.ish-color18 dt:hover+dd,
+.ish-sc-toggle.ish-color18 dt:hover,
+.ish-sc-toggle.ish-color18 dt:hover+dd,
+.ish-sc-tabs.ish-color18 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #f6d68a
+}
+
+.ish-color19 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color19 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color19 dt,
+.ish-sc-toggle.ish-color19 dt,
+.ish-sc-tabs.ish-color19 .ish-active-item,
+.ish-result.ish-color19:before,
+.ish-blog .ish-color19 .ish-underline:before,
+.ish-color19 .ish-underline:before,
+.ish-color19 .site-header .ish-container-fluid,
+.ish-color19 .site-header .ish-decor-container>div,
+.ish-color19 .site-header .ish-container-fluid.ish-bg-color19,
+.ish-color19 .ish-sidebar input,
+.ish-color19 .ish-sidebar button,
+.ish-color19 blockquote:before,
+.ish-color19 blockquote:after,
+.ish-color19 .comment-respond input.submit,
+.ish-color19 .ish-post-navigation a:hover span:before,
+.ish-color19 .ish-blurred-overlay {
+	background-color: #502b46
+}
+
+.ish-sc-element.ish-txt-color19 a,
+.ish-result.ish-color19 .ish-title a,
+.ish-blog .ish-color19 .ish-blog-post-title a,
+.ish-color19 .ish-sidebar .widget-title,
+.ish-color19 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color19 .comments-title,
+.ish-color19 .comment-reply-title,
+header .site-branding span.ish-txt-color19 {
+	color: #502b46
+}
+
+.ish-sc-accordion.ish-color19 dt,
+.ish-sc-accordion.ish-color19 dd,
+.ish-sc-toggle.ish-color19 dt,
+.ish-sc-toggle.ish-color19 dd,
+.ish-sc-tabs.ish-color19 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color19 .ish-tabs {
+	border-color: #502b46
+}
+
+.ish-sc-button:hover.ish-bg-color19,
+.ish-sc-accordion.ish-color19 dt:hover,
+.ish-sc-toggle.ish-color19 dt:hover,
+.ish-sc-tabs.ish-color19 .ish-tabs-menu li:hover,
+.ish-color19 .ish-sidebar button:hover {
+	background-color: #824672
+}
+
+.ish-color19 .comment-respond input.submit:hover {
+	background-color: #1e101a
+}
+
+.ish-txt-color19 a:hover,
+a:hover.ish-txt-color19 {
+	color: #824672
+}
+
+.ish-sc-accordion.ish-color19 dt:hover,
+.ish-sc-accordion.ish-color19 dt:hover+dd,
+.ish-sc-toggle.ish-color19 dt:hover,
+.ish-sc-toggle.ish-color19 dt:hover+dd,
+.ish-sc-tabs.ish-color19 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #824672
+}
+
+.ish-color20 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color20 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color20 dt,
+.ish-sc-toggle.ish-color20 dt,
+.ish-sc-tabs.ish-color20 .ish-active-item,
+.ish-result.ish-color20:before,
+.ish-blog .ish-color20 .ish-underline:before,
+.ish-color20 .ish-underline:before,
+.ish-color20 .site-header .ish-container-fluid,
+.ish-color20 .site-header .ish-decor-container>div,
+.ish-color20 .site-header .ish-container-fluid.ish-bg-color20,
+.ish-color20 .ish-sidebar input,
+.ish-color20 .ish-sidebar button,
+.ish-color20 blockquote:before,
+.ish-color20 blockquote:after,
+.ish-color20 .comment-respond input.submit,
+.ish-color20 .ish-post-navigation a:hover span:before,
+.ish-color20 .ish-blurred-overlay {
+	background-color: #672943
+}
+
+.ish-sc-element.ish-txt-color20 a,
+.ish-result.ish-color20 .ish-title a,
+.ish-blog .ish-color20 .ish-blog-post-title a,
+.ish-color20 .ish-sidebar .widget-title,
+.ish-color20 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color20 .comments-title,
+.ish-color20 .comment-reply-title,
+header .site-branding span.ish-txt-color20 {
+	color: #672943
+}
+
+.ish-sc-accordion.ish-color20 dt,
+.ish-sc-accordion.ish-color20 dd,
+.ish-sc-toggle.ish-color20 dt,
+.ish-sc-toggle.ish-color20 dd,
+.ish-sc-tabs.ish-color20 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color20 .ish-tabs {
+	border-color: #672943
+}
+
+.ish-sc-button:hover.ish-bg-color20,
+.ish-sc-accordion.ish-color20 dt:hover,
+.ish-sc-toggle.ish-color20 dt:hover,
+.ish-sc-tabs.ish-color20 .ish-tabs-menu li:hover,
+.ish-color20 .ish-sidebar button:hover {
+	background-color: #9e3f67
+}
+
+.ish-color20 .comment-respond input.submit:hover {
+	background-color: #30131f
+}
+
+.ish-txt-color20 a:hover,
+a:hover.ish-txt-color20 {
+	color: #9e3f67
+}
+
+.ish-sc-accordion.ish-color20 dt:hover,
+.ish-sc-accordion.ish-color20 dt:hover+dd,
+.ish-sc-toggle.ish-color20 dt:hover,
+.ish-sc-toggle.ish-color20 dt:hover+dd,
+.ish-sc-tabs.ish-color20 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #9e3f67
+}
+
+.ish-color21 .ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-color21 .ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-sc-accordion.ish-color21 dt,
+.ish-sc-toggle.ish-color21 dt,
+.ish-sc-tabs.ish-color21 .ish-active-item,
+.ish-result.ish-color21:before,
+.ish-blog .ish-color21 .ish-underline:before,
+.ish-color21 .ish-underline:before,
+.ish-color21 .site-header .ish-container-fluid,
+.ish-color21 .site-header .ish-decor-container>div,
+.ish-color21 .site-header .ish-container-fluid.ish-bg-color21,
+.ish-color21 .ish-sidebar input,
+.ish-color21 .ish-sidebar button,
+.ish-color21 blockquote:before,
+.ish-color21 blockquote:after,
+.ish-color21 .comment-respond input.submit,
+.ish-color21 .ish-post-navigation a:hover span:before,
+.ish-color21 .ish-blurred-overlay {
+	background-color: #9dbc96
+}
+
+.ish-sc-element.ish-txt-color21 a,
+.ish-result.ish-color21 .ish-title a,
+.ish-blog .ish-color21 .ish-blog-post-title a,
+.ish-color21 .ish-sidebar .widget-title,
+.ish-color21 .ish-sidebar a:not(.ish-read-more):not(.time):not(.social-icon):hover,
+.ish-color21 .comments-title,
+.ish-color21 .comment-reply-title,
+header .site-branding span.ish-txt-color21 {
+	color: #9dbc96
+}
+
+.ish-sc-accordion.ish-color21 dt,
+.ish-sc-accordion.ish-color21 dd,
+.ish-sc-toggle.ish-color21 dt,
+.ish-sc-toggle.ish-color21 dd,
+.ish-sc-tabs.ish-color21 .ish-tabs-menu .ish-active-item,
+.ish-sc-tabs.ish-color21 .ish-tabs {
+	border-color: #9dbc96
+}
+
+.ish-sc-button:hover.ish-bg-color21,
+.ish-sc-accordion.ish-color21 dt:hover,
+.ish-sc-toggle.ish-color21 dt:hover,
+.ish-sc-tabs.ish-color21 .ish-tabs-menu li:hover,
+.ish-color21 .ish-sidebar button:hover {
+	background-color: #c9dac5
+}
+
+.ish-color21 .comment-respond input.submit:hover {
+	background-color: #719e67
+}
+
+.ish-txt-color21 a:hover,
+a:hover.ish-txt-color21 {
+	color: #c9dac5
+}
+
+.ish-sc-accordion.ish-color21 dt:hover,
+.ish-sc-accordion.ish-color21 dt:hover+dd,
+.ish-sc-toggle.ish-color21 dt:hover,
+.ish-sc-toggle.ish-color21 dt:hover+dd,
+.ish-sc-tabs.ish-color21 .ish-tabs-menu .ish-active-item:hover {
+	border-color: #c9dac5
+}
+
+.ish-nav-container .ish-search-submit:hover,
+.ish-social-box>span a:hover {
+	color: #f3d600
+}
+
+.ish-sticky-on .ish-logo-container .ish-logo-box,
+.ish-sticky-on .ish-menu-container .ish-icon-nav,
+.ish-navigation ul li.ish-active-item span:before,
+.ish-navigation ul li.ish-hover>a span:before,
+.ish-page-numbers:hover,
+.ish-page-numbers.ish-next,
+.ish-footer a:hover:before,
+.ish-back-to-top a.ish-hover span:before,
+.ish-footer .ish-underline:before,
+.ish-navigation .ish-underline:before {
+	background-color: #f3d600
+}
+
+html,
+a,
+.ish-title,
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder,
+#content .ish-social-box a {
+	color: #515151
+}
+
+html,
+a,
+.ish-title,
+form input::-moz-placeholder,
+form textarea::-moz-placeholder,
+#content .ish-social-box a {
+	color: #515151
+}
+
+html,
+a,
+.ish-title,
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder,
+#content .ish-social-box a {
+	color: #515151
+}
+
+html,
+a,
+.ish-title,
+form input::placeholder,
+form textarea::placeholder,
+#content .ish-social-box a {
+	color: #515151
+}
+
+.ish-navigation .ish-nav-close,
+.ish-navigation ul ul a,
+.ish-navigation .ish-social-box a,
+.ish-footer,
+.ish-social-box>span a,
+#content .ish-social-box a:hover,
+.ish-widget-element input::-webkit-input-placeholder,
+.ish-widget-element textarea::-webkit-input-placeholder,
+#ish-contact-form button[type="submit"]:hover {
+	color: #a8a8a8
+}
+
+.ish-navigation .ish-nav-close,
+.ish-navigation ul ul a,
+.ish-navigation .ish-social-box a,
+.ish-footer,
+.ish-social-box>span a,
+#content .ish-social-box a:hover,
+.ish-widget-element input::-moz-placeholder,
+.ish-widget-element textarea::-moz-placeholder,
+#ish-contact-form button[type="submit"]:hover {
+	color: #a8a8a8
+}
+
+.ish-navigation .ish-nav-close,
+.ish-navigation ul ul a,
+.ish-navigation .ish-social-box a,
+.ish-footer,
+.ish-social-box>span a,
+#content .ish-social-box a:hover,
+.ish-widget-element input:-ms-input-placeholder,
+.ish-widget-element textarea:-ms-input-placeholder,
+#ish-contact-form button[type="submit"]:hover {
+	color: #a8a8a8
+}
+
+.ish-navigation .ish-nav-close,
+.ish-navigation ul ul a,
+.ish-navigation .ish-social-box a,
+.ish-footer,
+.ish-social-box>span a,
+#content .ish-social-box a:hover,
+.ish-widget-element input::placeholder,
+.ish-widget-element textarea::placeholder,
+#ish-contact-form button[type="submit"]:hover {
+	color: #a8a8a8
+}
+
+.ish-navigation .ish-nav-container-bg,
+.ish-navigation .ish-nav-bg,
+.ish-page-numbers,
+.ish-page-numbers.ish-next:hover,
+.ish-navigation .ish-nav-close,
+pre,
+hr,
+.ish-blurred-overlay {
+	background-color: #515151
+}
+
+.comment-respond input,
+.comment-respond textarea {
+	background-color: #777
+}
+
+.comment-respond input:hover,
+.comment-respond textarea:hover {
+	background-color: #848484
+}
+
+.ish-sidebar {
+	border-color: #777
+}
+
+.ish-txt-color3 a,
+.ish-navigation a,
+.ish-navigation,
+.ish-page-numbers,
+.ish-footer a,
+.ish-result:before,
+.ish-sc-button,
+.ish-sidebar .ish-widget-element input::-webkit-input-placeholder,
+.ish-sidebar .ish-widget-element textarea::-webkit-input-placeholder,
+pre,
+.comment-respond input,
+.comment-respond textarea,
+.comment-respond input::-webkit-input-placeholder,
+.comment-respond textarea::-webkit-input-placeholder,
+header .site-branding span {
+	color: #fcfcfc
+}
+
+.ish-txt-color3 a,
+.ish-navigation a,
+.ish-navigation,
+.ish-page-numbers,
+.ish-footer a,
+.ish-result:before,
+.ish-sc-button,
+.ish-sidebar .ish-widget-element input::-moz-placeholder,
+.ish-sidebar .ish-widget-element textarea::-moz-placeholder,
+pre,
+.comment-respond input,
+.comment-respond textarea,
+.comment-respond input::-moz-placeholder,
+.comment-respond textarea::-moz-placeholder,
+header .site-branding span {
+	color: #fcfcfc
+}
+
+.ish-txt-color3 a,
+.ish-navigation a,
+.ish-navigation,
+.ish-page-numbers,
+.ish-footer a,
+.ish-result:before,
+.ish-sc-button,
+.ish-sidebar .ish-widget-element input:-ms-input-placeholder,
+.ish-sidebar .ish-widget-element textarea:-ms-input-placeholder,
+pre,
+.comment-respond input,
+.comment-respond textarea,
+.comment-respond input:-ms-input-placeholder,
+.comment-respond textarea:-ms-input-placeholder,
+header .site-branding span {
+	color: #fcfcfc
+}
+
+.ish-txt-color3 a,
+.ish-navigation a,
+.ish-navigation,
+.ish-page-numbers,
+.ish-footer a,
+.ish-result:before,
+.ish-sc-button,
+.ish-sidebar .ish-widget-element input::placeholder,
+.ish-sidebar .ish-widget-element textarea::placeholder,
+pre,
+.comment-respond input,
+.comment-respond textarea,
+.comment-respond input::placeholder,
+.comment-respond textarea::placeholder,
+header .site-branding span {
+	color: #fcfcfc
+}
+
+.ish-portfolio-navigation a:hover span:before {
+	background-color: #fcfcfc
+}
+
+mark,
+.ish-sc-accordion[class*='ish-color'] dt,
+.ish-sc-accordion[class*='ish-color'] dt a,
+.ish-sc-toggle[class*='ish-color'] dt,
+.ish-sc-toggle[class*='ish-color'] dt a,
+.ish-sc-tabs[class*='ish-color'] .ish-tabs-menu .ish-active-item a,
+.ish-sc-tabs[class*='ish-color'] .ish-tabs-menu li:hover a,
+.ish-sidebar input,
+.ish-sidebar button {
+	color: #fff
+}
+
+mark {
+	background-color: #acde61
+}
+
+form input.invalid,
+form textarea.invalid {
+	border-top-color: #ff0000
+}
+
+.required-error:before,
+.required-error:after {
+	color: #ff0000
+}
+
+
+/*!-------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+.ish-pflo-gal img {
+	width: 100%;
+	max-width: 100%;
+	position: relative
+}
+
+.ish-pflo-gal .ish-item {
+	display: table;
+	width: 100%
+}
+
+.ish-pflo-gal .ish-item .ish-item-container {
+	display: table;
+	width: 100%;
+	position: relative
+}
+
+.ish-pflo-gal .ish-item .ish-caption-container,
+.ish-pflo-gal .ish-item .ish-img {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	text-align: left
+}
+
+.ish-pflo-gal .ish-item .ish-caption-container {
+	height: 100%;
+	width: 50px
+}
+
+.ish-pflo-gal .ish-item .ish-img {
+	max-width: calc(100% - (50 * 1px))
+}
+
+.ish-pflo-gal .ish-item .ish-caption {
+	position: absolute;
+	bottom: 0;
+	transform: rotate(-90deg);
+	transform-origin: bottom left 0;
+	left: 30px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	white-space: nowrap;
+	line-height: 30px;
+	height: 30px
+}
+
+.ish-pflo-gal .ish-item .ish-caption>* {
+	line-height: 30px
+}
+
+.ish-pflo-gal .ish-item:nth-child(2n+1) .ish-item-container {
+	direction: rtl
+}
+
+.ish-pflo-gal .ish-item:nth-child(2n+1) .ish-item-container>div {
+	direction: ltr
+}
+
+.ish-pflo-gal .ish-item:nth-child(2n+1) .ish-item-container .ish-caption {
+	left: 100%;
+	direction: rtl
+}
+
+.ish-pflo-gal.ish-1col .ish-item,
+.ish-pflo-gal.ish-2col .ish-item {
+	padding-bottom: 50px
+}
+
+.ish-pflo-gal.ish-square .ish-img {
+	overflow: hidden;
+	position: relative;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1)
+}
+
+.ish-pflo-gal.ish-square .ish-img a {
+	box-shadow: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+
+.ish-pflo-gal.ish-square .ish-img a.ish-img-scale:hover {
+	transform: scale(1.15)
+}
+
+.ish-pflo-gal.ish-square .ish-img:before {
+	padding-top: 100%;
+	content: '';
+	display: block
+}
+
+.ish-pflo-gal.ish-square .ish-img img {
+	opacity: 0;
+	display: block;
+	min-width: 100%;
+	min-height: 100%
+}
+
+.ish-pflo-gal.ish-scroll-anim .ish-item {
+	opacity: 1
+}
+
+.ish-pflo-gal.ish-scroll-anim .ish-item.shown {
+	opacity: 1
+}
+
+.ish-pflo-gal.ish-scroll-anim .ish-item.animate {
+	transform: translateY(200px);
+	animation: ishMoveUp 0.65s ease forwards
+}
+
+@keyframes ishMoveUp {
+	0% {}
+	100% {
+		transform: translateY(0);
+		opacity: 1
+	}
+}
+
+.page-template-portfolio .ish-caption-container span:not(.ish-h4) {
+	display: none
+}
+
+.ish-portfolio-navigation a {
+	text-decoration: none;
+	position: relative
+}
+
+.ish-portfolio-navigation a span {
+	display: none
+}
+
+.ish-shadow-image .ish-item {
+	display: table;
+	width: 100%
+}
+
+.ish-shadow-image .ish-item img {
+	width: 100%;
+	max-width: 100%;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1)
+}
+
+.ish-shadow-image .ish-item .ish-item-container {
+	display: table;
+	width: 100%;
+	position: relative
+}
+
+.ish-shadow-image .ish-item .ish-caption-container,
+.ish-shadow-image .ish-item .ish-img {
+	display: table-cell
+}
+
+.ish-shadow-image .ish-item .ish-caption-container {
+	height: 100%;
+	width: 50px
+}
+
+.ish-shadow-image .ish-item .ish-img {
+	max-width: calc(100% - (50 * 1px))
+}
+
+.ish-shadow-image .ish-item .ish-img a {
+	display: block;
+	overflow: hidden;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1)
+}
+
+.ish-shadow-image .ish-item .ish-img a img {
+	box-shadow: none;
+	transition-duration: 0.6s
+}
+
+.ish-shadow-image .ish-item .ish-img a:hover img {
+	transform: scale(1.15)
+}
+
+.ish-shadow-image .ish-item .ish-caption {
+	position: absolute;
+	z-index: 4;
+	transform: rotate(-90deg);
+	transform-origin: bottom left 0;
+	bottom: 0;
+	left: 30px;
+	white-space: nowrap;
+	line-height: 30px;
+	height: 30px
+}
+
+.ish-shadow-image .ish-item .ish-caption>* {
+	line-height: 30px
+}
+
+.ish-shadow-image .ish-item .ish-caption a {
+	text-decoration: none
+}
+
+.ish-shadow-image.ish-captions-right .ish-item-container {
+	direction: rtl
+}
+
+.ish-shadow-image.ish-captions-right .ish-item-container>div {
+	direction: ltr
+}
+
+.ish-shadow-image.ish-captions-right .ish-item-container .ish-caption {
+	left: 100%;
+	bottom: 0;
+	direction: rtl
+}
+
+.page-template-team .site-content .ish-row {
+	margin-bottom: 30px
+}
+
+.page-template-team .site-content .ish-row:last-child {
+	margin-bottom: 0
+}
+
+.page-template-team .ish-item {
+	margin-bottom: 30px
+}
+
+.page-template-team .ish-item .ish-caption {
+	transform: none;
+	left: 0;
+	width: 30px;
+	height: auto;
+	line-height: normal
+}
+
+.page-template-team .ish-item .ish-caption a {
+	display: block;
+	text-align: center;
+	padding: 10px 0 0;
+	z-index: 10;
+	transition-duration: 0.3s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translatez(0);
+	opacity: 0.5
+}
+
+.page-template-team .ish-item .ish-caption a:hover {
+	opacity: 1
+}
+
+.page-template-team .ish-item .ish-caption a i {
+	display: inline-block
+}
+
+.page-template-team .ish-item .ish-caption-container {
+	vertical-align: bottom
+}
+
+.page-template-team .ish-captions-right .ish-item-container .ish-caption {
+	right: 0;
+	left: auto
+}
+
+
+/*!-------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+
+.ish-blog-masonry img,
+.ish-blog-classic img {
+	width: 100%;
+	max-width: 100%
+}
+
+.ish-blog-masonry .ish-item,
+.ish-blog-classic .ish-item {
+	display: table;
+	width: 100%
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-title>*:first-child,
+.ish-blog-classic .ish-item .ish-blog-post-title>*:first-child {
+	margin-top: 50px
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-title a,
+.ish-blog-classic .ish-item .ish-blog-post-title a {
+	text-decoration: none
+}
+
+.ish-blog-masonry .ish-item .ish-row,
+.ish-blog-classic .ish-item .ish-row {
+	padding-bottom: 50px
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-details,
+.ish-blog-classic .ish-item .ish-blog-post-details {
+	margin-bottom: 50px
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-details .ish-label,
+.ish-blog-classic .ish-item .ish-blog-post-details .ish-label {
+	opacity: 0.5
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-details .ish-read-more,
+.ish-blog-classic .ish-item .ish-blog-post-details .ish-read-more {
+	margin-top: 14px
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-details a,
+.ish-blog-classic .ish-item .ish-blog-post-details a {
+	text-decoration: none
+}
+
+.ish-blog-masonry .ish-item .ish-blog-post-content p:first-child,
+.ish-blog-classic .ish-item .ish-blog-post-content p:first-child {
+	margin-top: 0
+}
+
+.ish-blog-classic .ish-item {
+	padding-bottom: 50px
+}
+
+.ish-blog-classic .ish-item:last-child {
+	padding-bottom: 30px
+}
+
+.ish-post-navigation .ish-separator {
+	opacity: 0.5
+}
+
+.ish-post-navigation .nav-links {
+	text-align: center
+}
+
+.ish-post-navigation .nav-links:before,
+.ish-post-navigation .nav-links:after {
+	content: " ";
+	display: table
+}
+
+.ish-post-navigation .nav-links:after {
+	clear: both
+}
+
+.ish-post-navigation .nav-links div {
+	display: inline
+}
+
+.ish-post-navigation a {
+	text-decoration: none;
+	position: relative
+}
+
+.ish-post-navigation a span {
+	display: none
+}
+
+
+/*!-------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 480px) {
+	.ish-widget-element {
+		margin-bottom: 50px
+	}
+	.ish-decor-container {
+		height: 160px
+	}
+	.ish-navigation.ish-nav-on {
+		transform: rotate(0deg)
+	}
+	.ish-navigation {
+		width: 480px;
+		transform: rotate(30deg)
+	}
+	.ish-navigation .ish-nav-bg {
+		position: absolute;
+		display: block;
+		width: 320px;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transform-origin: 0 0
+	}
+	.ish-navigation .ish-nav-close {
+		position: absolute;
+		top: 30px;
+		left: 80px;
+		transform: rotate(80deg) translateZ(0);
+		transform-origin: 0 0;
+		background: none
+	}
+	.ish-navigation .ish-nav-close i:before {
+		transform: rotate(0deg) translateZ(0);
+		transition: all 0.5s ease;
+		transform-origin: 50%
+	}
+	.ish-navigation .ish-nav-close:hover i:before {
+		transform: rotate(180deg) translateZ(0);
+		transition: all 0.5s ease
+	}
+	.ish-navigation .ish-nav-container-bg {
+		width: 320px;
+		height: 120%;
+		float: right
+	}
+	.ish-navigation .ish-nav-container-bg .ish-nav-container {
+		padding: 50px 50px 20px 20px;
+		height: 83%
+	}
+	.ish-pflo-gal.ish-1col,
+	.ish-pflo-gal.ish-2col {
+		margin-bottom: 50px
+	}
+	.ish-pflo-gal.ish-1col .ish-item,
+	.ish-pflo-gal.ish-2col .ish-item {
+		margin-top: -60px;
+		padding-bottom: 0;
+		width: calc(100% - 87px)
+	}
+	.ish-pflo-gal.ish-1col .ish-item:nth-child(2n),
+	.ish-pflo-gal.ish-2col .ish-item:nth-child(2n) {
+		margin-right: 87px
+	}
+	.ish-pflo-gal.ish-1col .ish-item:nth-child(2n+1),
+	.ish-pflo-gal.ish-2col .ish-item:nth-child(2n+1) {
+		margin-left: 87px
+	}
+	.page-template-portfolio .ish-caption-container span:not(.ish-h4) {
+		display: inline-block
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	H1,
+	H2,
+	H3,
+	H4,
+	H5,
+	H6,
+	p,
+	ul,
+	ol,
+	hr,
+	blockquote,
+	pre,
+	.ish-sc-element {
+		margin-top: 0;
+		margin-bottom: 50px
+	}
+	.ish-main-content .ish-row:last-child *[class*="ish-col-"]:last-child>*:last-child {
+		margin-bottom: 0
+	}
+	.ish-sidebar {
+		border-top: none
+	}
+	.page-with-sidebar .ish-main-content {
+		-ms-flex-preferred-size: 66.667%;
+		flex-basis: 66.667%;
+		max-width: 66.667%;
+		display: inline-block
+	}
+	.page-with-sidebar .ish-sidebar {
+		-ms-flex-preferred-size: 33.333%;
+		flex-basis: 33.333%;
+		max-width: 33.333%;
+		padding-top: 100px;
+		display: inline-block
+	}
+	.page-with-sidebar .ish-sidebar.ish-sidebar-left {
+		float: left;
+		padding-right: 60px
+	}
+	.page-with-sidebar .ish-sidebar.ish-sidebar-right {
+		float: right;
+		padding-left: 60px
+	}
+	.page-with-sidebar .ish-sidebar .ish-widget-element {
+		margin-bottom: 100px
+	}
+	.ish-container-fluid {
+		padding: 1rem 2rem
+	}
+	.ish-decor-container {
+		height: 210px
+	}
+	.site-header .ish-logo-container .ish-menu-desc,
+	.site-header .ish-logo-container .ish-theme-tagline,
+	.site-header .ish-menu-container .ish-menu-desc,
+	.site-header .ish-menu-container .ish-theme-tagline {
+		display: inline
+	}
+	.ish-navigation {
+		width: 550px
+	}
+	.ish-navigation .ish-nav-container {
+		padding: 100px 50px 10% 20px
+	}
+	.ish-footer .ish-separator {
+		width: auto
+	}
+	.ish-footer .ish-social-box>span {
+		margin-bottom: 0
+	}
+	.ish-results .ish-result {
+		padding-top: 0;
+		padding-left: 126px
+	}
+	.ish-txt-align-left {
+		text-align: left
+	}
+	.ish-txt-align-right {
+		text-align: right
+	}
+	.ish-txt-align-center {
+		text-align: center
+	}
+	.ish-resp-center .ish-main-content,
+	.ish-resp-center .ish-sidebar {
+		text-align: left
+	}
+	.ish-resp-center .ish-txt-align-left {
+		text-align: left
+	}
+	.ish-resp-center .ish-txt-align-right {
+		text-align: right
+	}
+	.ish-resp-center .ish-txt-align-center {
+		text-align: center
+	}
+	.ish-resp-center .ish-result:before {
+		left: 0
+	}
+	.ish-resp-center ul,
+	.ish-resp-center ol {
+		text-align: inherit
+	}
+	.ish-pflo-gal.ish-scroll-anim .ish-item {
+		opacity: 0
+	}
+	.ish-pflo-gal.ish-2col .ish-item .ish-item-container {
+		margin-bottom: 150px
+	}
+	.ish-pflo-gal.ish-2col .ish-item:nth-child(2) .ish-item-container {
+		padding-top: 150px
+	}
+	.ish-pflo-gal.ish-2col .ish-item:nth-child(2n) {
+		width: 52% !important;
+		left: 0 !important;
+		margin: 0
+	}
+	.ish-pflo-gal.ish-2col .ish-item:nth-child(2n+1) {
+		width: 52% !important;
+		left: calc(48% + 1px) !important;
+		margin: 0
+	}
+	.ish-pflo-gal.ish-2col.ish-scroll-anim {
+		margin-bottom: -100px
+	}
+	.ish-portfolio-navigation a {
+		text-decoration: none;
+		position: relative
+	}
+	.ish-portfolio-navigation a span {
+		position: relative;
+		display: inline-block
+	}
+	.ish-portfolio-navigation a span:before {
+		position: absolute;
+		content: '';
+		width: 0;
+		height: 2px;
+		left: 50%;
+		bottom: -2px;
+		transition: all 0.5s ease;
+		left: 50%
+	}
+	.ish-portfolio-navigation a i:before {
+		position: relative;
+		left: 0;
+		transition-duration: 0.3s
+	}
+	.ish-portfolio-navigation a:hover span:before {
+		width: 100%;
+		left: 0;
+		transition: all 0.5s ease
+	}
+	.ish-portfolio-navigation a:hover:first-child i:before {
+		left: -30px
+	}
+	.ish-portfolio-navigation a:hover:last-child i:before {
+		left: 30px
+	}
+	.ish-blog-masonry .ish-item:first-child .ish-blog-post-media {
+		margin-top: 50px
+	}
+	.ish-blog-masonry .ish-item:nth-child(2n-1) {
+		padding-right: 40px
+	}
+	.ish-blog-masonry .ish-item:nth-child(2n) {
+		padding-left: 40px
+	}
+	.ish-blog-classic .ish-item,
+	.ish-blog-classic .ish-item:last-child {
+		padding-bottom: 100px
+	}
+	.ish-blog-classic .ish-item .ish-blog-post-details,
+	.ish-blog-masonry .ish-item .ish-blog-post-details {
+		margin-bottom: auto
+	}
+	.ish-post-navigation .nav-links {
+		text-align: center
+	}
+	.ish-post-navigation .nav-links div {
+		display: inline
+	}
+	.ish-post-navigation .ish-separator {
+		display: none
+	}
+	.ish-post-navigation a {
+		text-decoration: none;
+		position: relative
+	}
+	.ish-post-navigation a span {
+		position: relative;
+		display: inline
+	}
+	.ish-post-navigation a span:before {
+		position: absolute;
+		content: '';
+		width: 0;
+		height: 2px;
+		left: 50%;
+		bottom: -2px;
+		transition: all 0.5s ease;
+		left: 50%
+	}
+	.ish-post-navigation a i:before {
+		position: relative;
+		left: 0;
+		transition-duration: 0.3s
+	}
+	.ish-post-navigation a:hover span:before {
+		width: 100%;
+		left: 0;
+		transition: all 0.5s ease
+	}
+	.ish-post-navigation .nav-previous {
+		float: left
+	}
+	.ish-post-navigation .nav-next {
+		float: right
+	}
+	.ish-post-navigation .nav-previous a:hover i:before {
+		left: -30px
+	}
+	.ish-post-navigation .nav-next a:hover i:before {
+		left: 30px
+	}
+	.page-template-blog .ish-pagination-container {
+		margin-top: -100px
+	}
+	.ish-shadow-image .ish-item {
+		width: calc(100% - 87px);
+		margin-right: 87px
+	}
+	.ish-shadow-image.ish-captions-right .ish-item {
+		margin-left: 87px
+	}
+	.ish-shadow-image.ish-captions-right .ish-item {
+		margin-left: 87px
+	}
+	.ish-shadow-image.ish-no-margin .ish-item {
+		width: 100%;
+		margin-right: 87px
+	}
+	.ish-shadow-image.ish-no-margin.ish-captions-right .ish-item {
+		margin-left: 0
+	}
+	.ish-shadow-image.ish-no-margin.ish-captions-right .ish-item {
+		margin-left: 0
+	}
+	.page-template-team .site-content .ish-row {
+		margin-bottom: 0;
+		margin-top: -50px
+	}
+	.page-template-team .site-content .ish-row:first-child {
+		margin-top: 0
+	}
+	.page-template-team .ish-item {
+		margin-bottom: 0
+	}
+	#map {
+		height: 600px
+	}
+	blockquote {
+		padding: 50px
+	}
+	blockquote:before {
+		top: -50px
+	}
+	blockquote:after {
+		top: 50px
+	}
+	pre {
+		padding: 40px
+	}
+	.ish-img-scale.ish-align-left {
+		float: left;
+		display: inline-block;
+		margin: 0 1.5em 0.5em 0
+	}
+	.ish-img-scale.ish-align-right {
+		float: right;
+		display: inline-block;
+		margin: 0 0 0.5em 1.2em
+	}
+	.ish-resp-center .ish-img-scale.ish-align-left {
+		margin: 0 1.5em 0.5em 0
+	}
+	.ish-resp-center .ish-img-scale.ish-align-right {
+		margin: 0 0 0.5em 1.2em
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.ish-decor-container {
+		height: 280px
+	}
+	.site-header .ish-header {
+		margin-top: 100px
+	}
+	.site-header .site-title {
+		margin: 100px 0 40px
+	}
+	.ish-content-overlay-small .site-content {
+		margin-top: -50px
+	}
+	.ish-content-overlay-medium .site-content {
+		margin-top: -100px
+	}
+	.ish-content-overlay-large .site-content {
+		margin-top: -150px
+	}
+	#map {
+		height: 800px
+	}
+}
+
+@media only screen and (min-width: 1360px) {
+	.ish-decor-container {
+		height: 390px
+	}
+	.ish-sticky-on.site-header .ish-header {
+		width: calc(100% - 4rem - 32px);
+		left: inherit;
+		margin-top: 50px
+	}
+	.ish-sticky-on.site-header .ish-logo-container,
+	.ish-sticky-on.site-header .ish-menu-container {
+		top: 40px;
+		width: 180px
+	}
+	.site-header .ish-header {
+		margin-top: 0
+	}
+	.site-header .ish-logo-container,
+	.site-header .ish-menu-container {
+		position: fixed;
+		top: 100px;
+		left: 50%;
+		margin-left: 480px;
+		margin-top: 0;
+		z-index: 99;
+		width: 180px;
+		text-align: center
+	}
+	.site-header .ish-logo-container .ish-vertical,
+	.site-header .ish-menu-container .ish-vertical {
+		transform: rotate(-90deg)
+	}
+	.site-header .ish-logo-container .ish-menu-desc,
+	.site-header .ish-logo-container .ish-theme-tagline,
+	.site-header .ish-menu-container .ish-menu-desc,
+	.site-header .ish-menu-container .ish-theme-tagline {
+		position: relative;
+		width: 200%;
+		padding: 0;
+		float: right;
+		right: 50%;
+		top: 35px;
+		transform-origin: 100% 50%
+	}
+	.site-header .ish-logo-container .ish-menu-desc,
+	.site-header .ish-menu-container .ish-menu-desc {
+		top: 22px;
+		padding-bottom: 4px
+	}
+	.site-header .ish-logo-container {
+		margin-left: -660px
+	}
+	.site-header .ish-menu-container .ish-icon-nav i {
+		float: none;
+		display: inline-block
+	}
+	.site-header .site-title {
+		margin-top: 170px
+	}
+	.ish-content-overlay-small .site-content {
+		margin-top: -100px
+	}
+	.ish-content-overlay-medium .site-content {
+		margin-top: -150px
+	}
+	.ish-content-overlay-large .site-content {
+		margin-top: -230px
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.ish-decor-container {
+		height: 470px
+	}
+}
+
+@media only screen and (min-height: 800px) {
+	.ish-navigation .ish-nav-bg {
+		height: 150%
+	}
+}
